@@ -3,830 +3,1325 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="theme-color" content="#060d1c">
-<meta name="description" content="Meydiansyah Studio - AI Creative House. Jasa AI video, AI photo, cinematic, storytelling, dan konten promosi.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071426">
+<meta name="description" content="Meydiansyah Studio | AI Creative House. Jasa video AI, foto AI, cinematic, fantasy, storytelling, dan promosi bisnis.">
 <title>Meydiansyah Studio | AI Creative House</title>
 
 <style>
-:root{
---bg:#060d1c;
---bg2:#0b1830;
---card:#10213c;
---blue:#087cff;
---cyan:#42dcff;
---silver:#e4f1ff;
---muted:#9db1ca;
---line:#ffffff18;
+:root {
+  --bg:#050c18;
+  --panel:#0b1a2d;
+  --panel2:#10243b;
+  --blue:#1687ff;
+  --cyan:#36d9f5;
+  --white:#f4f8ff;
+  --muted:#9bb0c8;
+  --line:rgba(115,184,255,.18);
+  --gold:#e8c879;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{
-margin:0;background:
-radial-gradient(ellipse at 15% 0%,#123a6933,transparent 35%),
-radial-gradient(ellipse at 100% 40%,#087cff20,transparent 35%),
-var(--bg);
-color:white;font-family:Arial,Helvetica,sans-serif;
-padding-bottom:85px;
+
+* { box-sizing:border-box; }
+
+html { scroll-behavior:smooth; }
+
+body {
+  margin:0;
+  background:
+    radial-gradient(circle at 85% 0%,#12345a 0,transparent 32%),
+    radial-gradient(circle at 0% 40%,#0b2440 0,transparent 28%),
+    var(--bg);
+  color:var(--white);
+  font-family:Arial,sans-serif;
+  line-height:1.6;
 }
-a{color:inherit;text-decoration:none}
-button,input,select,textarea{font:inherit}
-button{cursor:pointer}
-.container{width:92%;max-width:650px;margin:auto}
-header{
-position:sticky;top:0;z-index:50;
-background:#060d1cf0;backdrop-filter:blur(18px);
-border-bottom:1px solid #42dcff22;
+
+a { color:inherit; text-decoration:none; }
+button,input { font:inherit; }
+
+.wrap {
+  width:min(1100px,92%);
+  margin:auto;
 }
-.topbar{
-height:65px;display:flex;align-items:center;
-justify-content:space-between;
+
+.topbar {
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(5,12,24,.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
 }
-.brand{font-size:16px;font-weight:900;letter-spacing:.6px}
-.brand span{color:var(--cyan)}
-.menu-button{
-background:#10233d;border:1px solid #ffffff22;
-color:white;border-radius:9px;padding:9px 12px
+
+.nav {
+  height:68px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
 }
-.hero{
-padding:65px 0 38px;text-align:center;
-position:relative;
+
+.brand {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:900;
 }
-.hero-badge{
-display:inline-block;padding:9px 15px;
-border:1px solid #42dcff66;border-radius:40px;
-color:var(--cyan);font-size:10px;letter-spacing:2px;
-background:#087cff12;
+
+.logo {
+  width:39px;
+  height:39px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:#03101e;
+  font-size:21px;
+  box-shadow:0 0 24px #1687ff55;
 }
-.hero h1{
-font-size:43px;line-height:1.08;
-margin:23px 0 15px;font-weight:900;
-letter-spacing:-1.7px;
+
+.brand small {
+  display:block;
+  color:var(--cyan);
+  font-size:9px;
+  letter-spacing:2px;
 }
-.gradient{
-background:linear-gradient(100deg,#fff,#55dfff,#8aaaff);
--webkit-background-clip:text;color:transparent;
+
+.navlinks {
+  display:flex;
+  gap:20px;
+  color:var(--muted);
+  font-size:12px;
 }
-.hero p{
-font-size:13px;color:#b6c9df;
-line-height:1.9;max-width:450px;margin:auto;
+
+.navlinks a:hover { color:var(--cyan); }
+
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:12px 18px;
+  border-radius:12px;
+  background:linear-gradient(110deg,var(--blue),var(--cyan));
+  color:#03101e;
+  font-size:12px;
+  font-weight:900;
+  border:0;
+  cursor:pointer;
+  box-shadow:0 8px 25px #1687ff35;
 }
-.btn{
-border:0;border-radius:11px;padding:13px 17px;
-font-weight:800;display:inline-flex;
-justify-content:center;align-items:center;
-transition:.2s;
+
+.btn.ghost {
+  background:transparent;
+  color:var(--white);
+  border:1px solid var(--line);
+  box-shadow:none;
 }
-.btn:active{transform:scale(.97)}
-.primary{
-color:white;background:linear-gradient(110deg,#076bea,#20baf5);
-box-shadow:0 5px 20px #087cff38;
+
+.hero {
+  padding:72px 0 55px;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:35px;
+  align-items:center;
 }
-.secondary{
-background:#ffffff09;color:#e7f5ff;
-border:1px solid #61c9ff55;
+
+.eyebrow {
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  padding:7px 12px;
+  border:1px solid #36d9f544;
+  border-radius:30px;
+  color:var(--cyan);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.6px;
+  background:#0b2035;
 }
-.hero-buttons{
-display:flex;gap:10px;justify-content:center;
-flex-wrap:wrap;margin-top:23px;
+
+h1 {
+  font-size:clamp(38px,7vw,70px);
+  line-height:1.02;
+  letter-spacing:-2.5px;
+  margin:20px 0;
 }
-.hero-buttons .btn{font-size:12px}
-.stats{
-display:grid;grid-template-columns:repeat(3,1fr);
-gap:8px;margin-top:32px;
+
+h1 span {
+  background:linear-gradient(90deg,#fff,var(--cyan),#7db6ff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
 }
-.stat{
-background:#ffffff08;border:1px solid var(--line);
-border-radius:12px;padding:13px 5px;
+
+.hero p {
+  color:var(--muted);
+  max-width:590px;
+  font-size:15px;
 }
-.stat strong{
-display:block;color:var(--cyan);font-size:13px;
-margin-bottom:5px;
+
+.hero-actions {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:25px;
 }
-.stat small{font-size:9px;color:var(--muted)}
-section{padding:37px 0}
-.heading{text-align:center;margin-bottom:21px}
-.heading h2{font-size:25px;margin:0 0 8px}
-.heading p{
-font-size:12px;color:var(--muted);
-line-height:1.7;margin:0;
+
+.hero-art {
+  min-height:300px;
+  border-radius:28px;
+  border:1px solid #36d9f533;
+  background:linear-gradient(145deg,#12395b,#091729 62%);
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 25px 80px #0008;
 }
-.heading .line{
-width:48px;height:3px;border-radius:10px;
-background:linear-gradient(90deg,var(--blue),var(--cyan));
-margin:12px auto 0;
+
+.hero-art:before,
+.hero-art:after {
+  content:"";
+  position:absolute;
+  border:1px solid #36d9f544;
+  border-radius:50%;
+  width:230px;
+  height:230px;
+  transform:rotateX(65deg);
 }
-.toolbar{
-display:flex;gap:8px;margin-bottom:15px;
+
+.hero-art:after {
+  width:310px;
+  height:310px;
 }
-.toolbar input,.toolbar select{
-min-width:0;background:#0b1a30;color:white;
-border:1px solid #ffffff24;border-radius:10px;
-padding:11px;font-size:12px;
+
+.orb {
+  font-size:95px;
+  filter:drop-shadow(0 0 25px #36d9f5aa);
+  z-index:1;
 }
-.toolbar input{flex:1;width:50%}
-.toolbar select{width:115px}
-.catalog{
-display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
-gap:10px;
+
+.art-label {
+  position:absolute;
+  bottom:22px;
+  left:22px;
+  color:#b9d8f4;
+  font-size:10px;
+  letter-spacing:2px;
 }
-.service{
-overflow:hidden;border:1px solid #ffffff1b;
-border-radius:14px;background:
-linear-gradient(145deg,#142b4b,#0b172c);
+
+section { padding:55px 0; }
+
+.section-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:18px;
+  margin-bottom:24px;
 }
-.service:hover{border-color:#42dcff88}
-.thumb{
-height:100px;display:grid;place-items:center;
-font-size:37px;
-background:radial-gradient(circle at center,#216ca5,#102747 65%,#09172c);
-border-bottom:1px solid #ffffff15;
+
+.kicker {
+  color:var(--cyan);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2px;
 }
-.service-body{padding:11px}
-.tag{
-font-size:9px;color:var(--cyan);
-font-weight:800;letter-spacing:1px;
+
+h2 {
+  font-size:clamp(26px,4vw,38px);
+  line-height:1.15;
+  margin:7px 0;
 }
-.service h3{font-size:13px;margin:7px 0}
-.service p{
-font-size:10px;color:#aebfd4;
-line-height:1.6;margin:0 0 10px;
-min-height:48px;
+
+.sub {
+  color:var(--muted);
+  font-size:13px;
+  max-width:600px;
+  margin:0;
 }
-.price{font-size:13px;font-weight:900;color:#61ddff;margin-bottom:10px}
-.price small{font-size:9px;color:var(--muted)}
-.service-buttons{display:grid;grid-template-columns:1fr 1fr;gap:5px}
-.service-buttons button{font-size:9px;padding:10px 4px}
-.package-list{display:grid;gap:12px}
-.package{
-padding:19px;border:1px solid #42dcff45;
-border-radius:16px;
-background:linear-gradient(145deg,#15375b,#0b1930);
-position:relative;overflow:hidden;
+
+.service-tools {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:20px 0;
 }
-.package:after{
-content:"";position:absolute;width:110px;height:110px;
-right:-45px;top:-45px;border-radius:50%;
-background:#29c9ff20;filter:blur(15px);
+
+.search {
+  flex:1;
+  min-width:180px;
+  background:#0b1a2d;
+  color:white;
+  border:1px solid var(--line);
+  border-radius:11px;
+  padding:12px 14px;
+  outline:none;
 }
-.package h3{margin:8px 0;font-size:18px}
-.package p{color:#b7cbe0;font-size:12px;line-height:1.7}
-.package ul{padding-left:18px;color:#d5e5f5;font-size:12px;line-height:2}
-.old{font-size:11px;color:#8da4bf;text-decoration:line-through}
-.promo{font-size:24px;color:var(--cyan);font-weight:900;margin:7px 0 12px}
-.gallery{
-display:grid;grid-template-columns:repeat(2,1fr);gap:10px;
+
+.filters {
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
 }
-.gallery-item{
-min-height:145px;border:1px solid #ffffff22;
-border-radius:14px;padding:13px;
-display:flex;flex-direction:column;
-justify-content:flex-end;overflow:hidden;
-background:linear-gradient(145deg,#1d6293,#101c39);
+
+.filter {
+  border:1px solid var(--line);
+  background:#0b1a2d;
+  color:var(--muted);
+  padding:9px 13px;
+  border-radius:30px;
+  font-size:11px;
+  cursor:pointer;
 }
-.gallery-item:nth-child(2){background:linear-gradient(145deg,#754b85,#111c39)}
-.gallery-item:nth-child(3){background:linear-gradient(145deg,#916e42,#111c39)}
-.gallery-item:nth-child(4){background:linear-gradient(145deg,#277c79,#111c39)}
-.gallery-item:nth-child(5){background:linear-gradient(145deg,#475b9c,#111c39)}
-.gallery-item:nth-child(6){background:linear-gradient(145deg,#944e48,#111c39)}
-.gallery-item strong{font-size:12px}
-.gallery-item small{font-size:10px;color:#d2e3f4;margin-top:5px}
-.notice{text-align:center;font-size:10px;color:#8fa8c4;line-height:1.6;margin-top:12px}
-.panel{
-background:linear-gradient(145deg,#132947,#0b172b);
-border:1px solid #ffffff20;
-border-radius:15px;padding:17px;
+
+.filter.active {
+  background:#12385b;
+  color:var(--cyan);
+  border-color:#36d9f577;
 }
-.field{margin-bottom:13px}
-.field label{
-display:block;font-size:11px;
-color:#c9d8e9;margin-bottom:7px;
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
 }
-.field input,.field select,.field textarea{
-width:100%;padding:12px;
-background:#071529;color:white;
-border:1px solid #3c5877;border-radius:9px;
-outline:none;font-size:12px;
+
+.service-card,
+.package,
+.gallery-card,
+.info-card {
+  background:linear-gradient(145deg,#10243a,#091727);
+  border:1px solid var(--line);
+  border-radius:17px;
+  overflow:hidden;
 }
-.field textarea{min-height:90px;resize:vertical}
-.field input:focus,.field textarea:focus,.field select:focus{
-border-color:var(--cyan);
-box-shadow:0 0 0 2px #42dcff18;
+
+.service-card {
+  padding:17px;
+  transition:.2s;
 }
-.summary{
-padding:13px;background:#071529;
-border:1px solid #ffffff15;border-radius:10px;
-color:#c6d9eb;font-size:12px;line-height:1.8;
-margin-bottom:17px;
+
+.service-card:hover,
+.package:hover {
+  transform:translateY(-3px);
+  border-color:#36d9f577;
 }
-.steps{display:grid;gap:11px}
-.step{display:flex;gap:12px;align-items:flex-start}
-.step-number{
-width:27px;height:27px;flex-shrink:0;
-border-radius:9px;display:grid;place-items:center;
-background:#087cff2b;color:var(--cyan);
-font-weight:900;font-size:12px;
+
+.service-icon {
+  width:45px;
+  height:45px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  background:#12395b;
+  color:var(--cyan);
+  font-size:22px;
+  margin-bottom:13px;
 }
-.step p{font-size:11px;color:#b6c8dd;line-height:1.6;margin:3px 0}
-.faq details{
-background:#112540;border:1px solid #ffffff19;
-border-radius:11px;padding:14px;margin-bottom:9px;
+
+.service-card h3 {
+  font-size:14px;
+  margin:0 0 5px;
 }
-.faq summary{font-size:12px;font-weight:800;cursor:pointer}
-.faq details p{font-size:11px;line-height:1.7;color:#b4c8df}
-.contact{
-text-align:center;padding:27px 18px;
-border-radius:17px;border:1px solid #42dcff55;
-background:radial-gradient(circle at 50% 0%,#087cff44,transparent 70%),#10233e;
+
+.service-card p {
+  font-size:11px;
+  color:var(--muted);
+  margin:0 0 14px;
+  min-height:34px;
 }
-.contact h2{font-size:24px}
-.contact p{font-size:12px;color:#b6cce3;line-height:1.8}
-.socials{display:flex;gap:9px;justify-content:center;flex-wrap:wrap}
-footer{
-text-align:center;color:#829bb7;font-size:10px;
-padding:25px 10px;border-top:1px solid #ffffff15;
-line-height:2;
+
+.price-row {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
 }
-.bottom-nav{
-position:fixed;bottom:0;left:0;right:0;
-z-index:60;background:#071326f5;
-backdrop-filter:blur(20px);
-border-top:1px solid #ffffff20;
-display:grid;grid-template-columns:repeat(4,1fr);
-padding:9px 5px max(9px,env(safe-area-inset-bottom));
+
+.price {
+  font-size:15px;
+  font-weight:900;
+  color:var(--cyan);
 }
-.bottom-nav a{
-display:flex;flex-direction:column;align-items:center;
-gap:4px;color:#a5bad2;font-size:9px;
+
+.small-btn {
+  border:1px solid #36d9f566;
+  color:var(--cyan);
+  background:#0b2035;
+  border-radius:9px;
+  padding:8px 11px;
+  font-size:10px;
+  font-weight:800;
+  cursor:pointer;
 }
-.bottom-nav .symbol{font-size:19px}
-.bottom-nav a:active,.bottom-nav a:hover{color:var(--cyan)}
-.modal{
-display:none;position:fixed;inset:0;
-z-index:100;background:#000c;
-padding:18px;align-items:center;justify-content:center;
+
+.package-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
 }
-.modal.show{display:flex}
-.modal-box{
-width:100%;max-width:440px;
-max-height:85vh;overflow:auto;
-background:#10233e;border:1px solid #42dcff77;
-border-radius:17px;padding:21px;position:relative;
+
+.package {
+  padding:21px;
+  position:relative;
 }
-.close{
-position:absolute;right:14px;top:10px;
-background:none;border:0;color:white;font-size:25px;
+
+.package.featured {
+  border-color:#36d9f5aa;
+  box-shadow:0 0 35px #1687ff18;
 }
-.modal-box h2{font-size:21px}
-.modal-box p{font-size:12px;line-height:1.8;color:#c0d1e4}
-@media(min-width:600px){
-.catalog{grid-template-columns:repeat(3,1fr)}
-.package-list{grid-template-columns:repeat(3,1fr)}
+
+.ribbon {
+  font-size:9px;
+  letter-spacing:1px;
+  color:#071426;
+  background:var(--gold);
+  padding:5px 9px;
+  border-radius:20px;
+  font-weight:900;
+  display:inline-block;
 }
- 
-.gallery-tabs{
- display:flex;
- justify-content:center;
- gap:8px;
- margin-bottom:18px;
+
+.package h3 {
+  font-size:18px;
+  margin:12px 0 4px;
 }
-.gallery-tabs button{
- background:#10233e;
- color:#b9cde2;
- border:1px solid #ffffff25;
- padding:10px 19px;
- border-radius:30px;
- font-size:11px;
+
+.package .desc {
+  color:var(--muted);
+  font-size:11px;
 }
-.gallery-tabs button.active{
- background:linear-gradient(100deg,#087cff,#25c8f5);
- color:white;
- border-color:transparent;
+
+.old-price {
+  text-decoration:line-through;
+  color:#71849a;
+  font-size:12px;
+  margin-top:15px;
 }
-.gallery{
- display:grid;
- grid-template-columns:repeat(2,minmax(0,1fr));
- gap:11px;
+
+.new-price {
+  font-size:27px;
+  font-weight:900;
+  color:var(--cyan);
 }
-.portfolio-item{
- overflow:hidden;
- background:#10213c;
- border:1px solid #42dcff35;
- border-radius:13px;
+
+.package ul {
+  padding-left:18px;
+  color:#c4d4e6;
+  font-size:12px;
+  min-height:100px;
 }
-.portfolio-item img,
-.portfolio-item video{
- display:block;
- width:100%;
- height:145px;
- object-fit:cover;
- background:#071326;
+
+.package li { margin:7px 0; }
+
+.package .btn {
+  width:100%;
+  margin-top:10px;
 }
-.portfolio-info{
- padding:11px;
- display:flex;
- flex-direction:column;
- gap:5px;
+
+.gallery-tools {
+  display:flex;
+  gap:8px;
+  margin-bottom:18px;
+  flex-wrap:wrap;
 }
-.portfolio-info strong{font-size:12px}
-.portfolio-info small{
- color:#48dfff;
- font-size:9px;
+
+.gallery-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
 }
-.photo-viewer{
- display:none;
- position:fixed;
- inset:0;
- z-index:200;
- background:#000e;
- align-items:center;
- justify-content:center;
- padding:15px;
+
+.gallery-card { cursor:pointer; }
+
+.gallery-thumb {
+  aspect-ratio:16/10;
+  background:radial-gradient(circle at 50% 35%,#236b9e,#0b1b30 65%);
+  display:grid;
+  place-items:center;
+  font-size:42px;
+  position:relative;
 }
-.photo-viewer.show{display:flex}
-.photo-viewer img{
- max-width:100%;
- max-height:85vh;
- object-fit:contain;
- border-radius:10px;
+
+.gallery-thumb img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
-.photo-close{
- position:absolute;
- top:20px;
- right:20px;
- background:#ffffff22;
- color:white;
- border:0;
- border-radius:50%;
- width:40px;
- height:40px;
- font-size:25px;
+
+.play {
+  position:absolute;
+  right:12px;
+  bottom:12px;
+  background:#06111dcc;
+  border:1px solid #ffffff55;
+  border-radius:30px;
+  padding:5px 10px;
+  font-size:10px;
 }
- 
+
+.gallery-meta { padding:12px 14px; }
+
+.gallery-meta strong {
+  font-size:12px;
+  display:block;
+}
+
+.gallery-meta span {
+  font-size:10px;
+  color:var(--muted);
+}
+
+.notice {
+  margin-top:13px;
+  color:var(--muted);
+  font-size:10px;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.info-card { padding:20px; }
+
+.info-card h3 {
+  margin:0 0 8px;
+  font-size:15px;
+}
+
+.info-card p,
+.info-card li {
+  font-size:12px;
+  color:var(--muted);
+}
+
+.faq details {
+  padding:15px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.faq summary {
+  cursor:pointer;
+  font-size:13px;
+  font-weight:800;
+}
+
+.faq p {
+  font-size:12px;
+  color:var(--muted);
+}
+
+.contact-box {
+  padding:30px;
+  border-radius:23px;
+  background:linear-gradient(120deg,#123b61,#0b1a2d 75%);
+  border:1px solid #36d9f544;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.contact-box p {
+  color:#b7cce2;
+  font-size:12px;
+  margin-bottom:0;
+}
+
+footer {
+  border-top:1px solid var(--line);
+  padding:25px 0;
+  color:var(--muted);
+  font-size:10px;
+}
+
+.footer-row {
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.modal {
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#020711ef;
+  z-index:50;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+}
+
+.modal.show { display:flex; }
+
+.modal-box {
+  width:min(480px,100%);
+  background:#0d2035;
+  border:1px solid #36d9f566;
+  border-radius:20px;
+  padding:22px;
+  position:relative;
+}
+
+.close {
+  position:absolute;
+  right:15px;
+  top:12px;
+  background:none;
+  border:0;
+  color:white;
+  font-size:24px;
+  cursor:pointer;
+}
+
+.modal-box h3 { margin:0 30px 8px 0; }
+
+.modal-box p {
+  color:var(--muted);
+  font-size:12px;
+}
+
+.modal-price {
+  font-size:22px;
+  color:var(--cyan);
+  font-weight:900;
+  margin:15px 0;
+}
+
+.modal .btn { width:100%; }
+
+.lightbox-content {
+  width:min(850px,100%);
+  max-height:85vh;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+  width:100%;
+  max-height:75vh;
+  object-fit:contain;
+  border-radius:12px;
+  background:#000;
+}
+
+@media(max-width:760px) {
+  .navlinks { display:none; }
+  .nav .btn { padding:10px 12px; font-size:10px; }
+  .hero {
+    padding:48px 0 35px;
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .hero-art { min-height:210px; }
+  .orb { font-size:70px; }
+  section { padding:40px 0; }
+  .grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+  }
+  .service-card { padding:13px; }
+  .service-card p { min-height:48px; }
+  .package-grid { grid-template-columns:1fr; }
+  .package ul { min-height:0; }
+  .gallery-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+  }
+  .two-col { grid-template-columns:1fr; }
+  .contact-box {
+    display:block;
+    padding:22px;
+  }
+  .contact-box .btn {
+    margin-top:17px;
+    width:100%;
+  }
+  .section-head { display:block; }
+  .section-head .sub { margin-top:8px; }
+}
+
+@media(max-width:370px) {
+  .grid,.gallery-grid { grid-template-columns:1fr; }
+  .hero-actions .btn { width:100%; }
+}
 </style>
 </head>
 
 <body>
-<header>
- <div class="container topbar">
-  <a href="#home" class="brand">MEYDIANSYAH <span>STUDIO.</span></a>
-  <a class="menu-button" href="#pesan">✦ Pesan</a>
- </div>
+
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="#home">
+      <span class="logo">✦</span>
+      <span>MEYDIANSYAH STUDIO
+        <small>AI CREATIVE HOUSE</small>
+      </span>
+    </a>
+
+    <nav class="navlinks">
+      <a href="#layanan">Layanan</a>
+      <a href="#paket">Paket</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <a class="btn" href="https://wa.me/6289654084629" target="_blank" rel="noopener">
+      KONSULTASI ↗
+    </a>
+  </div>
 </header>
 
 <main>
-<section class="hero container" id="home">
- <span class="hero-badge">✦ AI CREATIVE HOUSE ✦</span>
- <h1>IDE JADI<br><span class="gradient">KARYA LUAR BIASA.</span></h1>
- <p>
-  Wujudkan imajinasi menjadi karya visual menggunakan teknologi AI.
-  Dari video sinematik, foto kreatif, fantasy action, sampai konten promosi bisnis.
- </p>
- <div class="hero-buttons">
-  <a class="btn primary" href="#layanan">Jelajahi Layanan</a>
-  <a class="btn secondary" href="#pesan">Mulai Pesan</a>
- </div>
- <div class="stats">
-  <div class="stat"><strong>AI VIDEO</strong><small>Visual bergerak</small></div>
-  <div class="stat"><strong>AI PHOTO</strong><small>Foto kreatif</small></div>
-  <div class="stat"><strong>AI STORY</strong><small>Cerita visual</small></div>
- </div>
-</section>
 
-<section class="container" id="layanan">
- <div class="heading">
-  <h2>LAYANAN KREATIF</h2>
-  <p>Pilih layanan untuk mewujudkan ide visualmu.</p>
-  <div class="line"></div>
- </div>
- <div class="toolbar">
-  <input id="search" placeholder="⌕ Cari layanan...">
-  <select id="category">
-   <option value="all">Semua</option>
-   <option value="video">Video</option>
-   <option value="photo">Foto</option>
-   <option value="creative">Kreatif</option>
-  </select>
- </div>
- <div class="catalog" id="catalog"></div>
-</section>
-
-
-<section class="container" id="galeri">
- <div class="heading">
-  <h2>PORTFOLIO KARYA AI</h2>
-  <p>Kumpulan contoh karya Meydiansyah Studio.</p>
-  <div class="line"></div>
- </div>
-
- <div class="gallery-tabs">
-  <button class="active" onclick="filterGallery('all',this)">Semua</button>
-  <button onclick="filterGallery('foto',this)">Foto</button>
-  <button onclick="filterGallery('video',this)">Video</button>
- </div>
-
- <div class="gallery" id="portfolioGallery">
-
-  <!-- SAMPLE FOTO 1 -->
-  <div class="portfolio-item" data-type="foto">
-   <img src="assets/foto/cinematic.jpg"
-        alt="Contoh karya cinematic AI"
-        onclick="openPhoto(this.src)">
-   <div class="portfolio-info">
-    <strong>Cinematic AI</strong>
-    <small>Contoh Karya AI · Foto</small>
-   </div>
+<div class="wrap hero" id="home">
+  <div>
+    <span class="eyebrow">✦ CREATIVE IDEAS, POWERED BY AI</span>
+    <h1>Ubah ide jadi <span>karya luar biasa.</span></h1>
+    <p>
+      Meydiansyah Studio membantu mewujudkan video AI, visual sinematik,
+      karakter fantasi, hingga konten promosi bisnis.
+      Ceritakan idemu, kami bantu hidupkan.
+    </p>
+    <div class="hero-actions">
+      <a class="btn" href="#layanan">JELAJAHI LAYANAN ↓</a>
+      <a class="btn ghost"
+         href="https://wa.me/6289654084629?text=Halo%20Meydiansyah%20Studio%2C%20saya%20ingin%20konsultasi."
+         target="_blank" rel="noopener">CHAT WHATSAPP</a>
+    </div>
   </div>
 
-  <!-- SAMPLE FOTO 2 -->
-  <div class="portfolio-item" data-type="foto">
-   <img src="assets/foto/fantasy.jpg"
-        alt="Contoh karya fantasy AI"
-        onclick="openPhoto(this.src)">
-   <div class="portfolio-info">
-    <strong>Fantasy AI</strong>
-    <small>Contoh Karya AI · Foto</small>
-   </div>
+  <div class="hero-art">
+    <div class="orb">✦</div>
+    <div class="art-label">IMAGINATION / DESIGN / AI</div>
   </div>
-
-  <!-- SAMPLE FOTO 3 -->
-  <div class="portfolio-item" data-type="foto">
-   <img src="assets/foto/portrait.jpg"
-        alt="Contoh portrait AI"
-        onclick="openPhoto(this.src)">
-   <div class="portfolio-info">
-    <strong>AI Portrait</strong>
-    <small>Contoh Karya AI · Foto</small>
-   </div>
-  </div>
-
-  <!-- SAMPLE VIDEO 1 -->
-  <div class="portfolio-item" data-type="video">
-   <video controls playsinline preload="metadata">
-    <source src="assets/video/cinematic.mp4" type="video/mp4">
-   </video>
-   <div class="portfolio-info">
-    <strong>Cinematic Video</strong>
-    <small>Contoh Karya AI · Video</small>
-   </div>
-  </div>
-
-  <!-- SAMPLE VIDEO 2 -->
-  <div class="portfolio-item" data-type="video">
-   <video controls playsinline preload="metadata">
-    <source src="assets/video/fantasy.mp4" type="video/mp4">
-   </video>
-   <div class="portfolio-info">
-    <strong>Fantasy Action</strong>
-    <small>Contoh Karya AI · Video</small>
-   </div>
-  </div>
-
-  <!-- SAMPLE VIDEO 3 -->
-  <div class="portfolio-item" data-type="video">
-   <video controls playsinline preload="metadata">
-    <source src="assets/video/promosi.mp4" type="video/mp4">
-   </video>
-   <div class="portfolio-info">
-    <strong>Business Promotion</strong>
-    <small>Contoh Karya AI · Video</small>
-   </div>
-  </div>
-
- </div>
- <p class="notice">Semua media merupakan contoh karya AI.</p>
-</section>
-
-<div class="photo-viewer" id="photoViewer" onclick="closePhoto()">
- <button class="photo-close">×</button>
- <img id="largePhoto" alt="Preview karya AI">
 </div>
 
-</section>
+<section id="layanan">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="kicker">WHAT WE CREATE</div>
+        <h2>Layanan kreatif AI</h2>
+        <p class="sub">
+          Pilih layanan yang kamu butuhkan. Tekan detail untuk melihat informasi,
+          lalu pesan langsung melalui WhatsApp.
+        </p>
+      </div>
+    </div>
 
-<section class="container" id="galeri">
- <div class="heading">
-  <h2>GALERI KREATIF</h2>
-  <p>Inspirasi konsep visual dari berbagai kategori AI.</p>
-  <div class="line"></div>
- </div>
- <div class="gallery">
-  <div class="gallery-item"><strong>🎬 CINEMATIC</strong><small>Konsep visual film</small></div>
-  <div class="gallery-item"><strong>🐉 FANTASY WORLD</strong><small>Dunia imajinasi</small></div>
-  <div class="gallery-item"><strong>📸 AI PORTRAIT</strong><small>Foto kreatif</small></div>
-  <div class="gallery-item"><strong>🚀 BUSINESS</strong><small>Konten promosi</small></div>
-  <div class="gallery-item"><strong>⚔️ ACTION</strong><small>Adegan laga</small></div>
-  <div class="gallery-item"><strong>🧑 CHARACTER</strong><small>Desain karakter</small></div>
- </div>
- <p class="notice">Ilustrasi kategori. Bukan dokumentasi pesanan pelanggan.</p>
-</section>
+    <div class="service-tools">
+      <input id="searchInput" class="search" type="search"
+             placeholder="Cari layanan...">
 
-<section class="container" id="pesan">
- <div class="heading">
-  <h2>FORM PEMESANAN</h2>
-  <p>Isi kebutuhanmu. Pesanan akan disiapkan ke WhatsApp.</p>
-  <div class="line"></div>
- </div>
- <div class="panel">
-  <form id="orderForm">
-   <div class="field">
-    <label>Nama lengkap</label>
-    <input id="name" required placeholder="Masukkan nama">
-   </div>
-   <div class="field">
-    <label>Nomor WhatsApp kamu</label>
-    <input id="phone" required inputmode="tel" placeholder="08xxxxxxxxxx">
-   </div>
-   <div class="field">
-    <label>Pilih layanan</label>
-    <select id="service" required>
-     <option value="">Pilih layanan</option>
-    </select>
-   </div>
-   <div class="field">
-    <label>Durasi video / jumlah foto</label>
-    <select id="quantity">
-     <option>Belum ditentukan</option>
-     <option>Video 5-10 detik</option>
-     <option>Video 15 detik</option>
-     <option>Video 30 detik</option>
-     <option>Video 60 detik</option>
-     <option>1 foto</option>
-     <option>2 foto</option>
-     <option>5 foto</option>
-    </select>
-   </div>
-   <div class="field">
-    <label>Format video</label>
-    <select id="ratio">
-     <option>9:16 - TikTok / Reels / Shorts</option>
-     <option>16:9 - YouTube / Landscape</option>
-     <option>1:1 - Square</option>
-     <option>Tidak berlaku</option>
-    </select>
-   </div>
-   <div class="field">
-    <label>Ceritakan konsep atau ide</label>
-    <textarea id="concept" required placeholder="Jelaskan ide karya yang kamu inginkan..."></textarea>
-   </div>
-   <div class="field">
-    <label>Link referensi (opsional)</label>
-    <input id="reference" placeholder="Link foto atau video">
-   </div>
-   <div class="field">
-    <label>Catatan tambahan</label>
-    <textarea id="notes" placeholder="Catatan lainnya..."></textarea>
-   </div>
-   <div class="summary" id="summary">
-    Ringkasan pesanan akan tampil setelah layanan dipilih.
-   </div>
-   <button type="submit" class="btn primary" style="width:100%">
-    ✦ KIRIM PESANAN KE WHATSAPP
-   </button>
-  </form>
- </div>
-</section>
+      <div class="filters">
+        <button class="filter active" data-filter="Semua">Semua</button>
+        <button class="filter" data-filter="Video">Video AI</button>
+        <button class="filter" data-filter="Foto">Foto AI</button>
+        <button class="filter" data-filter="Kreatif">Kreatif</button>
+      </div>
+    </div>
 
-<section class="container">
- <div class="heading">
-  <h2>CARA PEMESANAN</h2>
-  <p>Proses mudah, jelas, dan praktis.</p>
-  <div class="line"></div>
- </div>
- <div class="panel steps">
-  <div class="step"><span class="step-number">1</span><p><b>Pilih layanan</b><br>Tentukan layanan atau paket yang diinginkan.</p></div>
-  <div class="step"><span class="step-number">2</span><p><b>Kirim konsep</b><br>Isi ide, referensi, dan detail kebutuhan.</p></div>
-  <div class="step"><span class="step-number">3</span><p><b>Konfirmasi</b><br>Diskusikan detail serta harga melalui WhatsApp.</p></div>
-  <div class="step"><span class="step-number">4</span><p><b>Produksi karya</b><br>Pengerjaan dimulai setelah kesepakatan.</p></div>
- </div>
-</section>
-
-<section class="container">
- <div class="heading">
-  <h2>FAQ</h2>
-  <p>Beberapa hal yang perlu diketahui.</p>
-  <div class="line"></div>
- </div>
- <div class="faq">
-  <details><summary>Apakah bisa request konsep sendiri?</summary><p>Bisa. Kirimkan ide, arahan visual, dan referensi melalui formulir pemesanan.</p></details>
-  <details><summary>Apakah bisa untuk TikTok dan YouTube?</summary><p>Bisa. Pilih rasio 9:16 untuk konten vertikal atau 16:9 untuk video landscape.</p></details>
-  <details><summary>Apakah harga bisa berubah?</summary><p>Harga yang ditampilkan merupakan harga dasar atau harga mulai. Harga akhir dikonfirmasi sebelum pengerjaan.</p></details>
-  <details><summary>Bagaimana cara membayar?</summary><p>Detail pembayaran dan proses pengerjaan dibicarakan melalui WhatsApp setelah pesanan dikonfirmasi.</p></details>
- </div>
-</section>
-
-<section class="container">
- <div class="contact">
-  <span class="hero-badge">LET'S CREATE</span>
-  <h2>WUJUDKAN IDEMU.</h2>
-  <p>Siap membuat sesuatu yang berbeda? Hubungi Meydiansyah Studio sekarang.</p>
-  <div class="socials">
-   <a class="btn primary" href="https://wa.me/6289654084629" target="_blank" rel="noopener">WhatsApp</a>
-   <a class="btn secondary" href="https://instagram.com/Bayumeydiansyahh" target="_blank" rel="noopener">Instagram</a>
+    <div class="grid" id="serviceGrid"></div>
   </div>
- </div>
 </section>
+
+<section id="paket">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="kicker">SPECIAL DEALS</div>
+        <h2>Paket hemat pilihan</h2>
+        <p class="sub">
+          Paket praktis untuk mulai membuat konten AI dengan harga lebih hemat.
+        </p>
+      </div>
+    </div>
+
+    <div class="package-grid" id="packageGrid"></div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="kicker">SELECTED VISUALS</div>
+        <h2>Galeri inspirasi</h2>
+        <p class="sub">
+          Contoh konsep visual yang bisa menjadi referensi untuk proyekmu.
+        </p>
+      </div>
+    </div>
+
+    <div class="gallery-tools">
+      <button class="filter active" data-gallery-filter="Semua">Semua</button>
+      <button class="filter" data-gallery-filter="Foto">Foto</button>
+      <button class="filter" data-gallery-filter="Video">Video</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid"></div>
+
+    <p class="notice">
+      * Contoh Karya AI. Galeri ini merupakan contoh visual/placeholder
+      dan bukan klaim hasil pesanan pelanggan.
+      Ganti file contoh dengan karya milikmu sendiri kapan saja.
+    </p>
+  </div>
+</section>
+
+<section id="tentang">
+  <div class="wrap two-col">
+    <div class="info-card">
+      <div class="kicker">ABOUT THE STUDIO</div>
+      <h2>Ide kamu, jadi visual yang bercerita.</h2>
+      <p>
+        Meydiansyah Studio adalah ruang kreatif untuk produksi konten berbasis AI.
+        Mulai dari visual sederhana sampai konsep sinematik dan fantasi,
+        setiap proyek dimulai dari ide dan kebutuhanmu.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>Alur pemesanan</h3>
+      <ol>
+        <li>Pilih layanan atau paket.</li>
+        <li>Kirim referensi dan brief melalui WhatsApp.</li>
+        <li>Diskusikan detail, harga final, dan estimasi pengerjaan.</li>
+        <li>Produksi dimulai setelah kesepakatan.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="kicker">GOOD TO KNOW</div>
+        <h2>Pertanyaan umum</h2>
+      </div>
+    </div>
+
+    <div class="faq">
+      <details>
+        <summary>Bagaimana cara memesan?</summary>
+        <p>
+          Pilih layanan atau paket, lalu tekan tombol pesan.
+          WhatsApp akan terbuka dengan pesan otomatis yang bisa kamu kirim.
+        </p>
+      </details>
+
+      <details>
+        <summary>Apakah harga sudah pasti?</summary>
+        <p>
+          Harga yang tertulis adalah harga awal sesuai daftar.
+          Kebutuhan khusus, tingkat detail, revisi, dan durasi tertentu
+          dapat memengaruhi harga akhir. Konfirmasi dahulu melalui WhatsApp.
+        </p>
+      </details>
+
+      <details>
+        <summary>Apakah bisa request konsep sendiri?</summary>
+        <p>
+          Bisa. Kirimkan ide, referensi gambar/video, format, durasi,
+          dan tujuan konten saat konsultasi.
+        </p>
+      </details>
+
+      <details>
+        <summary>Berapa lama proses pengerjaan?</summary>
+        <p>
+          Estimasi disesuaikan dengan tingkat kesulitan dan antrean.
+          Waktu pengerjaan akan dikonfirmasi sebelum pesanan disepakati.
+        </p>
+      </details>
+
+      <details>
+        <summary>Apakah contoh di galeri merupakan hasil pesanan?</summary>
+        <p>
+          Galeri diberi label Contoh Karya AI sebagai inspirasi visual.
+          Pastikan hanya menampilkan karya yang memang kamu punya izin
+          untuk publikasikan.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="kontak">
+  <div class="wrap">
+    <div class="contact-box">
+      <div>
+        <div class="kicker">LET'S CREATE SOMETHING</div>
+        <h2>Punya ide menarik?</h2>
+        <p>
+          Kirim pesan sekarang. Kita bahas konsep yang paling cocok
+          untuk kebutuhanmu.
+        </p>
+      </div>
+
+      <a class="btn"
+         href="https://wa.me/6289654084629?text=Halo%20Meydiansyah%20Studio%2C%20saya%20ingin%20konsultasi%20proyek%20AI."
+         target="_blank" rel="noopener">
+        HUBUNGI VIA WHATSAPP ↗
+      </a>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer>
- <b>MEYDIANSYAH STUDIO</b><br>
- AI CREATIVE HOUSE<br>
- © <span id="year"></span> All Rights Reserved.
+  <div class="wrap footer-row">
+    <span>© <span id="year"></span> Meydiansyah Studio | AI Creative House</span>
+    <span>
+      Instagram:
+      <a href="https://www.instagram.com/Bayumeydiansyahh/"
+         target="_blank" rel="noopener">@Bayumeydiansyahh</a>
+      · WhatsApp: 089654084629
+    </span>
+  </div>
 </footer>
 
-<nav class="bottom-nav">
- <a href="#home"><span class="symbol">⌂</span>Beranda</a>
- <a href="#layanan"><span class="symbol">✦</span>Layanan</a>
- <a href="#galeri"><span class="symbol">▧</span>Galeri</a>
- <a href="#pesan"><span class="symbol">✉</span>Pesan</a>
-</nav>
+<!-- MODAL DETAIL LAYANAN -->
+<div class="modal" id="detailModal" role="dialog"
+     aria-modal="true" aria-label="Detail layanan">
+  <div class="modal-box">
+    <button class="close" onclick="closeModal('detailModal')"
+            aria-label="Tutup">×</button>
+    <div class="service-icon" id="modalIcon">✦</div>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+    <div class="modal-price" id="modalPrice"></div>
+    <a class="btn" id="modalOrder" href="#"
+       target="_blank" rel="noopener">PESAN VIA WHATSAPP ↗</a>
+  </div>
+</div>
 
-<div class="modal" id="detailModal">
- <div class="modal-box">
-  <button class="close" onclick="closeDetail()">×</button>
-  <span class="tag">DETAIL LAYANAN</span>
-  <h2 id="modalTitle"></h2>
-  <p id="modalDescription"></p>
-  <p id="modalPrice" style="color:#53ddff;font-weight:bold"></p>
-  <button id="modalOrder" class="btn primary" style="width:100%">PESAN LAYANAN INI</button>
- </div>
+<!-- MODAL GALERI -->
+<div class="modal" id="mediaModal" role="dialog"
+     aria-modal="true" aria-label="Pratinjau media"
+     onclick="if(event.target===this)closeModal('mediaModal')">
+  <div class="modal-box lightbox-content">
+    <button class="close" onclick="closeModal('mediaModal')"
+            aria-label="Tutup">×</button>
+    <div id="mediaContent"></div>
+    <p id="mediaCaption"></p>
+  </div>
 </div>
 
 <script>
-const services=[
-{id:"v1",name:"AI Video 5-10 Detik",cat:"video",icon:"🎬",price:10000,desc:"Video AI pendek untuk teaser, bumper, dan konten singkat."},
-{id:"v2",name:"AI Video 15 Detik",cat:"video",icon:"🎥",price:15000,desc:"Video kreatif untuk media sosial dan storytelling singkat."},
-{id:"v3",name:"AI Video 30 Detik",cat:"video",icon:"📽️",price:20000,desc:"Video AI dengan alur visual untuk konten kreatif."},
-{id:"v4",name:"AI Video 60 Detik",cat:"video",icon:"🎞️",price:40000,desc:"Video satu menit untuk cerita dan konten lebih lengkap."},
-{id:"v5",name:"Cinematic AI Video",cat:"video",icon:"🎦",price:50000,desc:"Visual sinematik dengan atmosfer dan komposisi film."},
-{id:"v6",name:"Fantasy Fight Video",cat:"video",icon:"⚔️",price:50000,desc:"Pertarungan fantasi dengan jurus dan efek visual."},
-{id:"v7",name:"Business Promotion",cat:"video",icon:"🚀",price:50000,desc:"Video promosi produk, usaha, atau layanan."},
-{id:"v8",name:"AI Storytelling",cat:"creative",icon:"📖",price:50000,desc:"Cerita visual AI dengan karakter dan kesinambungan adegan."},
-{id:"p1",name:"Basic AI Photo",cat:"photo",icon:"📸",price:10000,desc:"Foto kreatif AI untuk kebutuhan konten personal."},
-{id:"p2",name:"Cinematic AI Photo",cat:"photo",icon:"🌆",price:15000,desc:"Foto dengan komposisi dan pencahayaan sinematik."},
-{id:"p3",name:"Fantasy AI Photo",cat:"photo",icon:"✨",price:20000,desc:"Foto bertema fantasi dengan visual imajinatif."},
-{id:"c1",name:"AI Character Sheet",cat:"creative",icon:"🧑‍🎨",price:15000,desc:"Lembar referensi untuk menjaga konsistensi karakter AI."}
+const WA_NUMBER = "6289654084629";
+
+/* DAFTAR LAYANAN DAN HARGA */
+const services = [
+  {
+    id:"v510",
+    name:"AI Video 5–10 Detik",
+    category:"Video",
+    price:"Rp10.000",
+    icon:"🎬",
+    desc:"Video AI singkat untuk ide kreatif, konten pendek, dan eksperimen visual."
+  },
+  {
+    id:"v15",
+    name:"AI Video 15 Detik",
+    category:"Video",
+    price:"Rp15.000",
+    icon:"🎞️",
+    desc:"Video pendek untuk Reels, Shorts, dan konten media sosial."
+  },
+  {
+    id:"v30",
+    name:"AI Video 30 Detik",
+    category:"Video",
+    price:"Rp20.000",
+    icon:"📽️",
+    desc:"Durasi lebih leluasa untuk menyampaikan cerita atau konsep."
+  },
+  {
+    id:"v60",
+    name:"AI Video 60 Detik",
+    category:"Video",
+    price:"Rp40.000",
+    icon:"🎥",
+    desc:"Video satu menit untuk cerita, konten, atau presentasi ide."
+  },
+  {
+    id:"cinema",
+    name:"Cinematic AI Video 60 Detik",
+    category:"Video",
+    price:"Mulai Rp50.000",
+    icon:"🎞️",
+    desc:"Visual sinematik dengan nuansa film, suasana, dan alur adegan."
+  },
+  {
+    id:"fantasy",
+    name:"Fantasy Fight Video 60 Detik",
+    category:"Video",
+    price:"Mulai Rp50.000",
+    icon:"⚔️",
+    desc:"Pertarungan fantasi, jurus spesial, dan aksi visual imajinatif."
+  },
+  {
+    id:"business",
+    name:"Video Promosi Bisnis 30 Detik",
+    category:"Video",
+    price:"Mulai Rp50.000",
+    icon:"🚀",
+    desc:"Konten promosi untuk produk, usaha, layanan, dan UMKM."
+  },
+  {
+    id:"story",
+    name:"AI Storytelling",
+    category:"Kreatif",
+    price:"Mulai Rp50.000",
+    icon:"📖",
+    desc:"Konsep cerita AI dengan karakter, suasana, dan rangkaian adegan."
+  },
+  {
+    id:"sheet",
+    name:"AI Character Sheet",
+    category:"Kreatif",
+    price:"Mulai Rp15.000",
+    icon:"🧑‍🎨",
+    desc:"Lembar referensi karakter untuk membantu menjaga konsistensi visual."
+  },
+  {
+    id:"photo-basic",
+    name:"Basic AI Photo",
+    category:"Foto",
+    price:"Rp10.000",
+    icon:"🖼️",
+    desc:"Foto AI dengan konsep sederhana dan tampilan menarik."
+  },
+  {
+    id:"photo-cinema",
+    name:"Cinematic AI Photo",
+    category:"Foto",
+    price:"Rp15.000",
+    icon:"🌌",
+    desc:"Foto AI dengan nuansa pencahayaan dan komposisi sinematik."
+  },
+  {
+    id:"photo-fantasy",
+    name:"Fantasy AI Photo",
+    category:"Foto",
+    price:"Rp20.000",
+    icon:"✨",
+    desc:"Visual fantasi, dunia imajinatif, dan karakter unik."
+  }
 ];
 
-const packages={
-"Starter Package":35000,
-"Reels Creator":45000,
-"Branding UMKM":80000
-};
-const rupiah=n=>"Rp"+n.toLocaleString("id-ID");
-const catalog=document.getElementById("catalog");
-const service=document.getElementById("service");
-const search=document.getElementById("search");
-const category=document.getElementById("category");
+/* DAFTAR PAKET */
+const packages = [
+  {
+    name:"Starter",
+    tag:"MULAI BERKARYA",
+    normal:"Rp40.000",
+    price:"Rp35.000",
+    desc:"Paket awal untuk mencoba konten AI.",
+    items:["1 AI Video 15 detik","2 Basic AI Photos"]
+  },
+  {
+    name:"Reels Creator",
+    tag:"PALING PRAKTIS",
+    normal:"Rp50.000",
+    price:"Rp45.000",
+    desc:"Paket ringkas untuk konten media sosial.",
+    items:["1 AI Video 30 detik","1 Cinematic AI Photo"],
+    featured:true
+  },
+  {
+    name:"Branding UMKM",
+    tag:"UNTUK BISNIS",
+    normal:"Rp90.000",
+    price:"Rp80.000",
+    desc:"Paket visual untuk memperkenalkan usaha.",
+    items:["1 Video Promosi Bisnis 30 detik","5 AI Photos"]
+  }
+];
 
-services.forEach(s=>{
- const o=document.createElement("option");
- o.value=s.name;
- o.textContent=s.name+" - "+rupiah(s.price);
- service.appendChild(o);
+/*
+GALERI:
+Nantinya ganti path kosong dengan lokasi file yang kamu unggah.
+Contoh:
+path:"assets/foto/cinematic.jpg"
+path:"assets/video/cinematic.mp4"
+*/
+const galleryItems = [
+  {
+    title:"Cinematic Visual",
+    type:"Foto",
+    icon:"🌃",
+    path:""
+  },
+  {
+    title:"Fantasy Character",
+    type:"Foto",
+    icon:"🧙",
+    path:""
+  },
+  {
+    title:"AI Portrait Concept",
+    type:"Foto",
+    icon:"📸",
+    path:""
+  },
+  {
+    title:"Cinematic Video",
+    type:"Video",
+    icon:"🎬",
+    path:""
+  },
+  {
+    title:"Fantasy Action",
+    type:"Video",
+    icon:"⚔️",
+    path:""
+  },
+  {
+    title:"Business Promo",
+    type:"Video",
+    icon:"🚀",
+    path:""
+  }
+];
+
+let activeCategory = "Semua";
+let activeGallery = "Semua";
+
+/* LINK WHATSAPP */
+function waLink(message) {
+  return "https://wa.me/" + WA_NUMBER +
+    "?text=" + encodeURIComponent(message);
+}
+
+/* PESAN LAYANAN LANGSUNG KE WHATSAPP */
+function orderService(id) {
+  const item = services.find(s => s.id === id);
+  if (!item) return;
+
+  window.open(
+    waLink(
+      "Halo Meydiansyah Studio!\n\n" +
+      "Saya tertarik memesan layanan: " + item.name +
+      "\nHarga tertera: " + item.price +
+      "\n\nMohon informasi proses dan ketersediaan. Terima kasih."
+    ),
+    "_blank"
+  );
+}
+
+/* PESAN PAKET LANGSUNG KE WHATSAPP */
+function orderPackage(name) {
+  const item = packages.find(p => p.name === name);
+  if (!item) return;
+
+  window.open(
+    waLink(
+      "Halo Meydiansyah Studio!\n\n" +
+      "Saya tertarik dengan Paket " + item.name +
+      ".\nHarga promo: " + item.price +
+      "\nIsi paket: " + item.items.join(", ") +
+      ".\n\nMohon informasi proses pemesanan. Terima kasih."
+    ),
+    "_blank"
+  );
+}
+
+/* TAMPILKAN KATALOG LAYANAN */
+function renderServices() {
+  const q = document.getElementById("searchInput").value.toLowerCase();
+
+  const list = services.filter(s =>
+    (activeCategory === "Semua" || s.category === activeCategory) &&
+    (s.name + " " + s.desc).toLowerCase().includes(q)
+  );
+
+  document.getElementById("serviceGrid").innerHTML =
+    list.length
+    ? list.map(s => `
+      <article class="service-card">
+        <div class="service-icon">${s.icon}</div>
+        <h3>${s.name}</h3>
+        <p>${s.desc}</p>
+        <div class="price-row">
+          <span class="price">${s.price}</span>
+          <button class="small-btn" onclick="showService('${s.id}')">
+            DETAIL
+          </button>
+        </div>
+      </article>
+    `).join("")
+    : `<p style="color:#9bb0c8">Layanan tidak ditemukan.</p>`;
+}
+
+/* TAMPILKAN PAKET */
+function renderPackages() {
+  document.getElementById("packageGrid").innerHTML =
+    packages.map(p => `
+      <article class="package ${p.featured ? "featured" : ""}">
+        <span class="ribbon">${p.tag}</span>
+        <h3>${p.name}</h3>
+        <div class="desc">${p.desc}</div>
+        <div class="old-price">${p.normal}</div>
+        <div class="new-price">${p.price}</div>
+        <ul>
+          ${p.items.map(x => `<li>${x}</li>`).join("")}
+        </ul>
+        <button class="btn" onclick="orderPackage('${p.name}')">
+          PILIH PAKET ↗
+        </button>
+      </article>
+    `).join("");
+}
+
+/* GALERI FOTO DAN VIDEO */
+function renderGallery() {
+  const list = galleryItems.filter(g =>
+    activeGallery === "Semua" || g.type === activeGallery
+  );
+
+  document.getElementById("galleryGrid").innerHTML =
+    list.map(g => {
+      const hasPath = !!g.path;
+
+      const visual = hasPath
+        ? (
+          g.type === "Video"
+          ? `<video src="${g.path}" muted playsinline></video>`
+          : `<img src="${g.path}" alt="${g.title}" loading="lazy">`
+        )
+        : `<span>${g.icon}</span>`;
+
+      return `
+        <article class="gallery-card"
+          onclick="openMedia('${g.title}','${g.type}','${g.path}')">
+          <div class="gallery-thumb">
+            ${visual}
+            ${g.type === "Video" ? '<span class="play">▶ VIDEO</span>' : ''}
+          </div>
+          <div class="gallery-meta">
+            <strong>${g.title}</strong>
+            <span>Contoh Karya AI · ${g.type}</span>
+          </div>
+        </article>
+      `;
+    }).join("");
+}
+
+/* DETAIL LAYANAN */
+function showService(id) {
+  const s = services.find(x => x.id === id);
+  if (!s) return;
+
+  document.getElementById("modalIcon").textContent = s.icon;
+  document.getElementById("modalTitle").textContent = s.name;
+  document.getElementById("modalDesc").textContent =
+    s.desc + " Harga dapat disesuaikan dengan kebutuhan khusus.";
+  document.getElementById("modalPrice").textContent = s.price;
+
+  document.getElementById("modalOrder").href =
+    waLink(
+      "Halo Meydiansyah Studio!\n" +
+      "Saya ingin memesan " + s.name +
+      ". Mohon info lebih lanjut."
+    );
+
+  document.getElementById("detailModal").classList.add("show");
+}
+
+/* BUKA MEDIA GALERI */
+function openMedia(title, type, path) {
+  const box = document.getElementById("mediaContent");
+
+  if (path) {
+    box.innerHTML = type === "Video"
+      ? `<video src="${path}" controls autoplay playsinline></video>`
+      : `<img src="${path}" alt="${title}">`;
+  } else {
+    box.innerHTML = `
+      <div style="
+        padding:65px 10px;
+        text-align:center;
+        font-size:65px;
+        background:linear-gradient(145deg,#12395b,#091729);
+        border-radius:12px">
+        ${type === "Video" ? "▶" : "✦"}
+      </div>
+      <p>
+        File contoh belum ditambahkan.
+        Unggah media ke folder assets, lalu isi nilai path
+        pada galleryItems di index.html.
+      </p>
+    `;
+  }
+
+  document.getElementById("mediaCaption").textContent =
+    title + " · Contoh Karya AI";
+
+  document.getElementById("mediaModal").classList.add("show");
+}
+
+/* TUTUP MODAL */
+function closeModal(id) {
+  document.getElementById(id).classList.remove("show");
+
+  const video = document.querySelector("#mediaContent video");
+  if (video) video.pause();
+}
+
+/* FILTER LAYANAN */
+document.querySelectorAll("[data-filter]").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll("[data-filter]")
+      .forEach(x => x.classList.remove("active"));
+
+    button.classList.add("active");
+    activeCategory = button.dataset.filter;
+    renderServices();
+  });
 });
-Object.keys(packages).forEach(n=>{
- const o=document.createElement("option");
- o.value=n;o.textContent=n+" - "+rupiah(packages[n]);
- service.appendChild(o);
+
+/* FILTER GALERI */
+document.querySelectorAll("[data-gallery-filter]").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll("[data-gallery-filter]")
+      .forEach(x => x.classList.remove("active"));
+
+    button.classList.add("active");
+    activeGallery = button.dataset.galleryFilter;
+    renderGallery();
+  });
 });
 
-function render(){
- let list=services.filter(s=>
- (category.value==="all"||s.cat===category.value)&&
- (s.name+" "+s.desc).toLowerCase().includes(search.value.toLowerCase())
- );
- catalog.innerHTML="";
- if(!list.length){
- catalog.innerHTML="<p style='color:#a9bdd3'>Tidak ada layanan ditemukan.</p>";
- return;
- }
- list.forEach(s=>{
- const el=document.createElement("article");
- el.className="service";
- el.innerHTML=`
- <div class="thumb">${s.icon}</div>
- <div class="service-body">
- <span class="tag">${s.cat==="video"?"AI VIDEO":s.cat==="photo"?"AI PHOTO":"CREATIVE"}</span>
- <h3>${s.name}</h3>
- <p>${s.desc}</p>
- <div class="price">${rupiah(s.price)} ${s.price>=50000?"<small>mulai</small>":""}</div>
- <div class="service-buttons">
- <button class="btn secondary" data-detail="${s.id}">Detail</button>
- <button class="btn primary" data-order="${s.id}">Pesan</button>
- </div>
- </div>`;
- catalog.appendChild(el);
- });
-}
-catalog.addEventListener("click",e=>{
- const d=e.target.closest("[data-detail]");
- const o=e.target.closest("[data-order]");
- if(d)showDetail(d.dataset.detail);
- if(o)chooseService(o.dataset.order);
-});
-function showDetail(id){
- const s=services.find(x=>x.id===id);
- if(!s)return;
- document.getElementById("modalTitle").textContent=s.name;
- document.getElementById("modalDescription").textContent=
- s.desc+" Cocok untuk konten media sosial, personal branding, bisnis, dan proyek kreatif. Proses dimulai dari diskusi konsep, referensi, produksi, hingga penyerahan hasil.";
- document.getElementById("modalPrice").textContent="Harga: "+rupiah(s.price)+(s.price>=50000?" (mulai)":"");
- document.getElementById("modalOrder").onclick=()=>{
- closeDetail();chooseService(id);
- };
- document.getElementById("detailModal").classList.add("show");
-}
-function closeDetail(){
- document.getElementById("detailModal").classList.remove("show");
-}
-function chooseService(id){
- const s=services.find(x=>x.id===id);
- if(!s)return;
- service.value=s.name;
- updateSummary();
- document.getElementById("pesan").scrollIntoView({behavior:"smooth"});
-}
-function choosePackage(name){
- service.value=name;
- updateSummary();
- document.getElementById("pesan").scrollIntoView({behavior:"smooth"});
-}
-function updateSummary(){
- const s=service.value||"Belum dipilih";
- const q=document.getElementById("quantity").value;
- const r=document.getElementById("ratio").value;
- document.getElementById("summary").textContent=
- "Layanan: "+s+" | Durasi/jumlah: "+q+" | Format: "+r+". Harga akhir dikonfirmasi melalui WhatsApp.";
-}
-[search,category].forEach(x=>x.addEventListener("input",render));
-[service,document.getElementById("quantity"),document.getElementById("ratio")].forEach(x=>x.addEventListener("change",updateSummary));
+/* PENCARIAN */
+document.getElementById("searchInput")
+  .addEventListener("input", renderServices);
 
-document.getElementById("orderForm").addEventListener("submit",e=>{
- e.preventDefault();
- const name=document.getElementById("name").value.trim();
- const phone=document.getElementById("phone").value.trim();
- const selected=service.value;
- const concept=document.getElementById("concept").value.trim();
- if(!name||!phone||!selected||!concept){
- alert("Lengkapi nama, nomor WhatsApp, layanan, dan konsep terlebih dahulu.");
- return;
- }
- const reference=document.getElementById("reference").value.trim();
- const notes=document.getElementById("notes").value.trim();
- const id="MS"+Date.now().toString().slice(-8);
- const message=`HALO MEYDIANSYAH STUDIO!
-
-Saya ingin melakukan pemesanan.
-
-ID Pesanan: ${id}
-Nama: ${name}
-Nomor WhatsApp: ${phone}
-Layanan: ${selected}
-Durasi/Jumlah: ${document.getElementById("quantity").value}
-Format: ${document.getElementById("ratio").value}
-
-KONSEP:
-${concept}
-
-Referensi: ${reference||"-"}
-Catatan: ${notes||"-"}
-
-Mohon informasi proses dan konfirmasi harga. Terima kasih.`;
- window.location.href="https://wa.me/6289654084629?text="+encodeURIComponent(message);
+/* TOMBOL ESC UNTUK MENUTUP MODAL */
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") {
+    closeModal("detailModal");
+    closeModal("mediaModal");
+  }
 });
 
-document.getElementById("detailModal").addEventListener("click",e=>{
- if(e.target.id==="detailModal")closeDetail();
-});
-document.getElementById("year").textContent=new Date().getFullYear();
-render();
-updateSummary();
- 
-function filterGallery(type,button){
- document.querySelectorAll(".gallery-tabs button")
- .forEach(b=>b.classList.remove("active"));
+/* TAHUN OTOMATIS */
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 
- button.classList.add("active");
-
- document.querySelectorAll(".portfolio-item")
- .forEach(item=>{
-  item.style.display=
-   type==="all"||item.dataset.type===type
-   ?"block":"none";
- });
-}
-
-function openPhoto(src){
- document.getElementById("largePhoto").src=src;
- document.getElementById("photoViewer").classList.add("show");
-}
-
-function closePhoto(){
- document.getElementById("photoViewer").classList.remove("show");
- document.getElementById("largePhoto").src="";
-}
- 
+/* JALANKAN KATALOG */
+renderServices();
+renderPackages();
+renderGallery();
 </script>
+
 </body>
 </html>
