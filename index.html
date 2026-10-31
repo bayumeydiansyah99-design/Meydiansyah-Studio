@@ -3,599 +3,669 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#071b38">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#060d1c">
+<meta name="description" content="Meydiansyah Studio - AI Creative House. Jasa AI video, AI photo, cinematic, storytelling, dan konten promosi.">
 <title>Meydiansyah Studio | AI Creative House</title>
-<meta name="description" content="Meydiansyah Studio menyediakan jasa AI video, AI photo, cinematic, storytelling, dan konten promosi bisnis.">
+
 <style>
 :root{
-  --navy:#050b19;
-  --blue:#087cff;
-  --cyan:#36e0ff;
-  --silver:#e8f3ff;
-  --white:#ffffff;
-  --muted:#a7bad3;
-  --panel:#101e35;
+--bg:#060d1c;
+--bg2:#0b1830;
+--card:#10213c;
+--blue:#087cff;
+--cyan:#42dcff;
+--silver:#e4f1ff;
+--muted:#9db1ca;
+--line:#ffffff18;
 }
-
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{
- margin:0;
- color:#f5f9ff;
- font-family:Inter,Arial,sans-serif;
- background:
- radial-gradient(ellipse at 15% 5%,#123e754c,transparent 35%),
- radial-gradient(ellipse at 90% 35%,#007eff24,transparent 35%),
- linear-gradient(135deg,#040916,#09172c 55%,#040916);
+margin:0;background:
+radial-gradient(ellipse at 15% 0%,#123a6933,transparent 35%),
+radial-gradient(ellipse at 100% 40%,#087cff20,transparent 35%),
+var(--bg);
+color:white;font-family:Arial,Helvetica,sans-serif;
+padding-bottom:85px;
 }
 a{color:inherit;text-decoration:none}
-.container{width:min(1160px,92%);margin:auto}
-
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+.container{width:92%;max-width:650px;margin:auto}
 header{
- position:sticky;top:0;z-index:20;
- background:#050b19eF;
- backdrop-filter:blur(20px);
- border-bottom:1px solid #49baff35;
- box-shadow:0 5px 30px #0005;
+position:sticky;top:0;z-index:50;
+background:#060d1cf0;backdrop-filter:blur(18px);
+border-bottom:1px solid #42dcff22;
 }
-.nav{height:72px}
-.logo{
- font-size:19px;font-weight:900;
- letter-spacing:1px;
- background:linear-gradient(90deg,#fff,#4bdcff);
- -webkit-background-clip:text;
- color:transparent;
+.topbar{
+height:65px;display:flex;align-items:center;
+justify-content:space-between;
 }
-.navlinks a{
- color:#c4d7ee;
- transition:.3s;
+.brand{font-size:16px;font-weight:900;letter-spacing:.6px}
+.brand span{color:var(--cyan)}
+.menu-button{
+background:#10233d;border:1px solid #ffffff22;
+color:white;border-radius:9px;padding:9px 12px
 }
-.navlinks a:hover{color:#36e0ff}
-
 .hero{
- padding:95px 0 75px;
- position:relative;
+padding:65px 0 38px;text-align:center;
+position:relative;
 }
-.eyebrow{
- display:inline-block;
- color:#5ee7ff;
- border:1px solid #3bdfff66;
- background:#16a9ff12;
- border-radius:50px;
- padding:10px 19px;
- font-size:11px;
- letter-spacing:3px;
- box-shadow:0 0 25px #00baff19;
+.hero-badge{
+display:inline-block;padding:9px 15px;
+border:1px solid #42dcff66;border-radius:40px;
+color:var(--cyan);font-size:10px;letter-spacing:2px;
+background:#087cff12;
 }
 .hero h1{
- font-size:clamp(43px,8vw,82px);
- font-weight:900;
- line-height:1.03;
- letter-spacing:-2px;
- margin:25px 0;
+font-size:43px;line-height:1.08;
+margin:23px 0 15px;font-weight:900;
+letter-spacing:-1.7px;
 }
-.hero h1 span{
- background:linear-gradient(100deg,#fff 5%,#48caff 48%,#8eabff 90%);
- -webkit-background-clip:text;
- color:transparent;
- filter:drop-shadow(0 0 20px #0c9cff40);
+.gradient{
+background:linear-gradient(100deg,#fff,#55dfff,#8aaaff);
+-webkit-background-clip:text;color:transparent;
 }
 .hero p{
- color:#b8cbe2;
- font-size:15px;
- line-height:1.9;
+font-size:13px;color:#b6c9df;
+line-height:1.9;max-width:450px;margin:auto;
 }
 .btn{
- border-radius:12px;
- padding:14px 21px;
- font-weight:800;
- transition:.25s;
+border:0;border-radius:11px;padding:13px 17px;
+font-weight:800;display:inline-flex;
+justify-content:center;align-items:center;
+transition:.2s;
 }
-.btn:hover{
- transform:translateY(-3px);
- box-shadow:0 10px 28px #008cff55;
-}
+.btn:active{transform:scale(.97)}
 .primary{
- color:white;
- background:linear-gradient(110deg,#0869ed,#14b9f5);
- box-shadow:0 5px 22px #087cff55;
+color:white;background:linear-gradient(110deg,#076bea,#20baf5);
+box-shadow:0 5px 20px #087cff38;
 }
 .secondary{
- color:#e4f5ff;
- background:#ffffff09;
- border:1px solid #6abfff66;
+background:#ffffff09;color:#e7f5ff;
+border:1px solid #61c9ff55;
 }
-.stat,.panel,.service,.package{
- background:linear-gradient(145deg,#152b49dd,#0a162bdd);
- border:1px solid #7bcaff25;
- border-radius:18px;
- box-shadow:0 12px 35px #0003;
+.hero-buttons{
+display:flex;gap:10px;justify-content:center;
+flex-wrap:wrap;margin-top:23px;
+}
+.hero-buttons .btn{font-size:12px}
+.stats{
+display:grid;grid-template-columns:repeat(3,1fr);
+gap:8px;margin-top:32px;
+}
+.stat{
+background:#ffffff08;border:1px solid var(--line);
+border-radius:12px;padding:13px 5px;
 }
 .stat strong{
- color:#4bdfff;
- text-shadow:0 0 15px #19aaff66;
+display:block;color:var(--cyan);font-size:13px;
+margin-bottom:5px;
 }
-.section{padding:65px 0}
-.section-title h2{
- font-size:clamp(25px,5vw,36px);
- font-weight:900;
- letter-spacing:-.5px;
+.stat small{font-size:9px;color:var(--muted)}
+section{padding:37px 0}
+.heading{text-align:center;margin-bottom:21px}
+.heading h2{font-size:25px;margin:0 0 8px}
+.heading p{
+font-size:12px;color:var(--muted);
+line-height:1.7;margin:0;
 }
-.section-title p{color:#9db5d2;line-height:1.8}
-.toolbar input,.toolbar select,
-.field input,.field select,.field textarea{
- background:#08162b;
- color:#fff;
- border:1px solid #345579;
- border-radius:11px;
- padding:13px;
+.heading .line{
+width:48px;height:3px;border-radius:10px;
+background:linear-gradient(90deg,var(--blue),var(--cyan));
+margin:12px auto 0;
 }
-.toolbar input:focus,.field input:focus,
-.field textarea:focus,.field select:focus{
- border-color:#37cfff;
- box-shadow:0 0 0 3px #1baaff22;
- outline:none;
+.toolbar{
+display:flex;gap:8px;margin-bottom:15px;
 }
-.catalog{gap:17px}
+.toolbar input,.toolbar select{
+min-width:0;background:#0b1a30;color:white;
+border:1px solid #ffffff24;border-radius:10px;
+padding:11px;font-size:12px;
+}
+.toolbar input{flex:1;width:50%}
+.toolbar select{width:115px}
+.catalog{
+display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+gap:10px;
+}
 .service{
- overflow:hidden;
- transition:.3s;
+overflow:hidden;border:1px solid #ffffff1b;
+border-radius:14px;background:
+linear-gradient(145deg,#142b4b,#0b172c);
 }
-.service:hover{
- transform:translateY(-6px);
- border-color:#36d9ff88;
- box-shadow:0 15px 35px #007bff30;
-}
+.service:hover{border-color:#42dcff88}
 .thumb{
- height:125px;
- background:
- radial-gradient(circle at 50% 35%,#218bdb,#102c50 50%,#08152a);
- font-size:43px;
- position:relative;
+height:100px;display:grid;place-items:center;
+font-size:37px;
+background:radial-gradient(circle at center,#216ca5,#102747 65%,#09172c);
+border-bottom:1px solid #ffffff15;
 }
-.thumb:after{
- content:"";
- position:absolute;
- bottom:0;left:15%;right:15%;
- height:1px;
- background:linear-gradient(90deg,transparent,#42dcff,transparent);
-}
-.service-content{padding:17px}
+.service-body{padding:11px}
 .tag{
- color:#48dfff;
- font-weight:800;
- letter-spacing:1.5px;
+font-size:9px;color:var(--cyan);
+font-weight:800;letter-spacing:1px;
 }
-.service h3{font-size:16px}
-.service p{color:#a9bdd5;line-height:1.8}
-.price{
- color:#60dfff;
- font-size:17px;
- text-shadow:0 0 12px #00aaff30;
+.service h3{font-size:13px;margin:7px 0}
+.service p{
+font-size:10px;color:#aebfd4;
+line-height:1.6;margin:0 0 10px;
+min-height:48px;
 }
-.packages{gap:18px}
+.price{font-size:13px;font-weight:900;color:#61ddff;margin-bottom:10px}
+.price small{font-size:9px;color:var(--muted)}
+.service-buttons{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.service-buttons button{font-size:9px;padding:10px 4px}
+.package-list{display:grid;gap:12px}
 .package{
- padding:23px;
- position:relative;
- overflow:hidden;
+padding:19px;border:1px solid #42dcff45;
+border-radius:16px;
+background:linear-gradient(145deg,#15375b,#0b1930);
+position:relative;overflow:hidden;
 }
-.package:before{
- content:"";
- position:absolute;
- width:150px;height:150px;
- right:-70px;top:-70px;
- border-radius:50%;
- background:#159fff20;
- filter:blur(15px);
+.package:after{
+content:"";position:absolute;width:110px;height:110px;
+right:-45px;top:-45px;border-radius:50%;
+background:#29c9ff20;filter:blur(15px);
 }
-.package:hover{
- border-color:#4ddfff88;
- transform:translateY(-4px);
- transition:.3s;
+.package h3{margin:8px 0;font-size:18px}
+.package p{color:#b7cbe0;font-size:12px;line-height:1.7}
+.package ul{padding-left:18px;color:#d5e5f5;font-size:12px;line-height:2}
+.old{font-size:11px;color:#8da4bf;text-decoration:line-through}
+.promo{font-size:24px;color:var(--cyan);font-weight:900;margin:7px 0 12px}
+.gallery{
+display:grid;grid-template-columns:repeat(2,1fr);gap:10px;
 }
-.promo{
- color:#55dcff;
- font-size:27px;
- text-shadow:0 0 20px #008cff55;
+.gallery-item{
+min-height:145px;border:1px solid #ffffff22;
+border-radius:14px;padding:13px;
+display:flex;flex-direction:column;
+justify-content:flex-end;overflow:hidden;
+background:linear-gradient(145deg,#1d6293,#101c39);
 }
-.gallery{gap:15px}
-.work{
- border:1px solid #8bd8ff40;
- border-radius:17px;
- min-height:180px;
- box-shadow:inset 0 0 35px #0005;
- transition:.3s;
+.gallery-item:nth-child(2){background:linear-gradient(145deg,#754b85,#111c39)}
+.gallery-item:nth-child(3){background:linear-gradient(145deg,#916e42,#111c39)}
+.gallery-item:nth-child(4){background:linear-gradient(145deg,#277c79,#111c39)}
+.gallery-item:nth-child(5){background:linear-gradient(145deg,#475b9c,#111c39)}
+.gallery-item:nth-child(6){background:linear-gradient(145deg,#944e48,#111c39)}
+.gallery-item strong{font-size:12px}
+.gallery-item small{font-size:10px;color:#d2e3f4;margin-top:5px}
+.notice{text-align:center;font-size:10px;color:#8fa8c4;line-height:1.6;margin-top:12px}
+.panel{
+background:linear-gradient(145deg,#132947,#0b172b);
+border:1px solid #ffffff20;
+border-radius:15px;padding:17px;
 }
-.work:hover{
- transform:scale(1.025);
- border-color:#4de3ff;
+.field{margin-bottom:13px}
+.field label{
+display:block;font-size:11px;
+color:#c9d8e9;margin-bottom:7px;
 }
-.panel{padding:23px}
+.field input,.field select,.field textarea{
+width:100%;padding:12px;
+background:#071529;color:white;
+border:1px solid #3c5877;border-radius:9px;
+outline:none;font-size:12px;
+}
+.field textarea{min-height:90px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{
+border-color:var(--cyan);
+box-shadow:0 0 0 2px #42dcff18;
+}
 .summary{
- background:#071329;
- border:1px solid #3e719e55;
+padding:13px;background:#071529;
+border:1px solid #ffffff15;border-radius:10px;
+color:#c6d9eb;font-size:12px;line-height:1.8;
+margin-bottom:17px;
 }
+.steps{display:grid;gap:11px}
+.step{display:flex;gap:12px;align-items:flex-start}
+.step-number{
+width:27px;height:27px;flex-shrink:0;
+border-radius:9px;display:grid;place-items:center;
+background:#087cff2b;color:var(--cyan);
+font-weight:900;font-size:12px;
+}
+.step p{font-size:11px;color:#b6c8dd;line-height:1.6;margin:3px 0}
 .faq details{
- background:linear-gradient(120deg,#112b49,#0a192f);
- border:1px solid #ffffff1c;
- border-radius:13px;
- transition:.2s;
+background:#112540;border:1px solid #ffffff19;
+border-radius:11px;padding:14px;margin-bottom:9px;
 }
-.faq details[open]{border-color:#3bdfff88}
-.faq summary{color:#ecf8ff}
-.faq details p{color:#afc3dc}
+.faq summary{font-size:12px;font-weight:800;cursor:pointer}
+.faq details p{font-size:11px;line-height:1.7;color:#b4c8df}
 .contact{
- border:1px solid #48d8ff55;
- border-radius:22px;
- background:
- radial-gradient(circle at 50% 0%,#087cff40,transparent 60%),
- linear-gradient(140deg,#102c50,#071326);
- box-shadow:0 15px 45px #0005;
- padding:42px 25px;
+text-align:center;padding:27px 18px;
+border-radius:17px;border:1px solid #42dcff55;
+background:radial-gradient(circle at 50% 0%,#087cff44,transparent 70%),#10233e;
 }
+.contact h2{font-size:24px}
+.contact p{font-size:12px;color:#b6cce3;line-height:1.8}
+.socials{display:flex;gap:9px;justify-content:center;flex-wrap:wrap}
 footer{
- border-top:1px solid #ffffff16;
- color:#8da9c8;
+text-align:center;color:#829bb7;font-size:10px;
+padding:25px 10px;border-top:1px solid #ffffff15;
+line-height:2;
 }
-.modal{backdrop-filter:blur(10px)}
+.bottom-nav{
+position:fixed;bottom:0;left:0;right:0;
+z-index:60;background:#071326f5;
+backdrop-filter:blur(20px);
+border-top:1px solid #ffffff20;
+display:grid;grid-template-columns:repeat(4,1fr);
+padding:9px 5px max(9px,env(safe-area-inset-bottom));
+}
+.bottom-nav a{
+display:flex;flex-direction:column;align-items:center;
+gap:4px;color:#a5bad2;font-size:9px;
+}
+.bottom-nav .symbol{font-size:19px}
+.bottom-nav a:active,.bottom-nav a:hover{color:var(--cyan)}
+.modal{
+display:none;position:fixed;inset:0;
+z-index:100;background:#000c;
+padding:18px;align-items:center;justify-content:center;
+}
+.modal.show{display:flex}
 .modal-box{
- background:linear-gradient(145deg,#132c4d,#071629);
- border:1px solid #4ccfff77;
- border-radius:20px;
- box-shadow:0 20px 70px #000a;
+width:100%;max-width:440px;
+max-height:85vh;overflow:auto;
+background:#10233e;border:1px solid #42dcff77;
+border-radius:17px;padding:21px;position:relative;
 }
-.close{color:#5bdfff}
-
-@media(max-width:760px){
- .hero{padding:65px 0 50px}
- .section{padding:45px 0}
- .catalog{grid-template-columns:repeat(2,minmax(0,1fr))}
- .packages{grid-template-columns:1fr}
- .gallery{grid-template-columns:repeat(2,1fr)}
- .order-wrap{grid-template-columns:1fr}
- .thumb{height:105px}
- .contact{padding:30px 18px}
+.close{
+position:absolute;right:14px;top:10px;
+background:none;border:0;color:white;font-size:25px;
 }
-@media(max-width:390px){
- .navlinks{gap:9px}
- .logo{font-size:14px}
- .service-content{padding:11px}
- .service-actions{flex-direction:column}
-}
-
+.modal-box h2{font-size:21px}
+.modal-box p{font-size:12px;line-height:1.8;color:#c0d1e4}
+@media(min-width:600px){
+.catalog{grid-template-columns:repeat(3,1fr)}
+.package-list{grid-template-columns:repeat(3,1fr)}
 }
 </style>
 </head>
+
 <body>
 <header>
-  <div class="container nav">
-    <a class="logo" href="#home">MEYDIANSYAH <span>STUDIO.</span></a>
-    <nav class="navlinks">
-      <a href="#layanan">Layanan</a>
-      <a href="#paket">Paket</a>
-      <a href="#galeri">Galeri</a>
-      <a href="#pesan">Pesan</a>
-    </nav>
-  </div>
+ <div class="container topbar">
+  <a href="#home" class="brand">MEYDIANSYAH <span>STUDIO.</span></a>
+  <a class="menu-button" href="#pesan">✦ Pesan</a>
+ </div>
 </header>
 
 <main>
 <section class="hero container" id="home">
-  <span class="eyebrow">AI CREATIVE HOUSE</span>
-  <h1>Bring Your Ideas<br><span>Into Reality.</span></h1>
-  <p>
-    Ubah ide menjadi karya visual yang menarik dengan teknologi AI.
-    Mulai dari video sinematik, foto kreatif, fantasy action,
-    hingga konten promosi bisnis.
-  </p>
-  <div class="actions">
-    <a class="btn primary" href="#layanan">Jelajahi Layanan</a>
-    <a class="btn secondary" href="#pesan">Konsultasi & Pesan</a>
-  </div>
-  <div class="stats">
-    <div class="stat"><strong>AI VIDEO</strong><span>Visual bergerak kreatif</span></div>
-    <div class="stat"><strong>AI PHOTO</strong><span>Foto dengan sentuhan AI</span></div>
-    <div class="stat"><strong>CREATIVE</strong><span>Ide jadi karya</span></div>
-  </div>
+ <span class="hero-badge">✦ AI CREATIVE HOUSE ✦</span>
+ <h1>IDE JADI<br><span class="gradient">KARYA LUAR BIASA.</span></h1>
+ <p>
+  Wujudkan imajinasi menjadi karya visual menggunakan teknologi AI.
+  Dari video sinematik, foto kreatif, fantasy action, sampai konten promosi bisnis.
+ </p>
+ <div class="hero-buttons">
+  <a class="btn primary" href="#layanan">Jelajahi Layanan</a>
+  <a class="btn secondary" href="#pesan">Mulai Pesan</a>
+ </div>
+ <div class="stats">
+  <div class="stat"><strong>AI VIDEO</strong><small>Visual bergerak</small></div>
+  <div class="stat"><strong>AI PHOTO</strong><small>Foto kreatif</small></div>
+  <div class="stat"><strong>AI STORY</strong><small>Cerita visual</small></div>
+ </div>
 </section>
 
-<section class="section container" id="layanan">
-  <div class="section-title">
-    <h2>Jelajahi Layanan</h2>
-    <p>Pilih layanan sesuai kebutuhan dan konsep kreatifmu.</p>
-  </div>
-  <div class="toolbar">
-    <input id="search" placeholder="Cari layanan..." aria-label="Cari layanan">
-    <select id="category" aria-label="Filter kategori">
-      <option value="all">Semua kategori</option>
-      <option value="video">AI Video</option>
-      <option value="photo">AI Photo</option>
-      <option value="creative">Creative</option>
+<section class="container" id="layanan">
+ <div class="heading">
+  <h2>LAYANAN KREATIF</h2>
+  <p>Pilih layanan untuk mewujudkan ide visualmu.</p>
+  <div class="line"></div>
+ </div>
+ <div class="toolbar">
+  <input id="search" placeholder="⌕ Cari layanan...">
+  <select id="category">
+   <option value="all">Semua</option>
+   <option value="video">Video</option>
+   <option value="photo">Foto</option>
+   <option value="creative">Kreatif</option>
+  </select>
+ </div>
+ <div class="catalog" id="catalog"></div>
+</section>
+
+<section class="container" id="paket">
+ <div class="heading">
+  <h2>PAKET HEMAT</h2>
+  <p>Pilihan paket untuk kebutuhan kontenmu.</p>
+  <div class="line"></div>
+ </div>
+ <div class="package-list">
+  <article class="package">
+   <span class="tag">STARTER</span>
+   <h3>Starter Package</h3>
+   <p>Awali kreativitasmu dengan paket sederhana.</p>
+   <ul><li>1 AI Video 15 detik</li><li>2 Basic AI Photos</li></ul>
+   <div class="old">Normal Rp40.000</div>
+   <div class="promo">Rp35.000</div>
+   <button class="btn primary" onclick="choosePackage('Starter Package')">Pilih Paket</button>
+  </article>
+  <article class="package">
+   <span class="tag">CONTENT CREATOR</span>
+   <h3>Reels Creator</h3>
+   <p>Untuk konten media sosial yang menarik.</p>
+   <ul><li>1 AI Video 30 detik</li><li>1 Cinematic Photo</li></ul>
+   <div class="old">Normal Rp50.000</div>
+   <div class="promo">Rp45.000</div>
+   <button class="btn primary" onclick="choosePackage('Reels Creator')">Pilih Paket</button>
+  </article>
+  <article class="package">
+   <span class="tag">BUSINESS</span>
+   <h3>Branding UMKM</h3>
+   <p>Perkenalkan bisnis melalui konten visual.</p>
+   <ul><li>1 Video Promosi 30 detik</li><li>5 AI Photos</li></ul>
+   <div class="old">Normal Rp90.000</div>
+   <div class="promo">Rp80.000</div>
+   <button class="btn primary" onclick="choosePackage('Branding UMKM')">Pilih Paket</button>
+  </article>
+ </div>
+</section>
+
+<section class="container" id="galeri">
+ <div class="heading">
+  <h2>GALERI KREATIF</h2>
+  <p>Inspirasi konsep visual dari berbagai kategori AI.</p>
+  <div class="line"></div>
+ </div>
+ <div class="gallery">
+  <div class="gallery-item"><strong>🎬 CINEMATIC</strong><small>Konsep visual film</small></div>
+  <div class="gallery-item"><strong>🐉 FANTASY WORLD</strong><small>Dunia imajinasi</small></div>
+  <div class="gallery-item"><strong>📸 AI PORTRAIT</strong><small>Foto kreatif</small></div>
+  <div class="gallery-item"><strong>🚀 BUSINESS</strong><small>Konten promosi</small></div>
+  <div class="gallery-item"><strong>⚔️ ACTION</strong><small>Adegan laga</small></div>
+  <div class="gallery-item"><strong>🧑 CHARACTER</strong><small>Desain karakter</small></div>
+ </div>
+ <p class="notice">Ilustrasi kategori. Bukan dokumentasi pesanan pelanggan.</p>
+</section>
+
+<section class="container" id="pesan">
+ <div class="heading">
+  <h2>FORM PEMESANAN</h2>
+  <p>Isi kebutuhanmu. Pesanan akan disiapkan ke WhatsApp.</p>
+  <div class="line"></div>
+ </div>
+ <div class="panel">
+  <form id="orderForm">
+   <div class="field">
+    <label>Nama lengkap</label>
+    <input id="name" required placeholder="Masukkan nama">
+   </div>
+   <div class="field">
+    <label>Nomor WhatsApp kamu</label>
+    <input id="phone" required inputmode="tel" placeholder="08xxxxxxxxxx">
+   </div>
+   <div class="field">
+    <label>Pilih layanan</label>
+    <select id="service" required>
+     <option value="">Pilih layanan</option>
     </select>
-    <select id="sort" aria-label="Urutkan harga">
-      <option value="default">Urutan awal</option>
-      <option value="low">Harga terendah</option>
-      <option value="high">Harga tertinggi</option>
+   </div>
+   <div class="field">
+    <label>Durasi video / jumlah foto</label>
+    <select id="quantity">
+     <option>Belum ditentukan</option>
+     <option>Video 5-10 detik</option>
+     <option>Video 15 detik</option>
+     <option>Video 30 detik</option>
+     <option>Video 60 detik</option>
+     <option>1 foto</option>
+     <option>2 foto</option>
+     <option>5 foto</option>
     </select>
-  </div>
-  <div class="catalog" id="catalog"></div>
+   </div>
+   <div class="field">
+    <label>Format video</label>
+    <select id="ratio">
+     <option>9:16 - TikTok / Reels / Shorts</option>
+     <option>16:9 - YouTube / Landscape</option>
+     <option>1:1 - Square</option>
+     <option>Tidak berlaku</option>
+    </select>
+   </div>
+   <div class="field">
+    <label>Ceritakan konsep atau ide</label>
+    <textarea id="concept" required placeholder="Jelaskan ide karya yang kamu inginkan..."></textarea>
+   </div>
+   <div class="field">
+    <label>Link referensi (opsional)</label>
+    <input id="reference" placeholder="Link foto atau video">
+   </div>
+   <div class="field">
+    <label>Catatan tambahan</label>
+    <textarea id="notes" placeholder="Catatan lainnya..."></textarea>
+   </div>
+   <div class="summary" id="summary">
+    Ringkasan pesanan akan tampil setelah layanan dipilih.
+   </div>
+   <button type="submit" class="btn primary" style="width:100%">
+    ✦ KIRIM PESANAN KE WHATSAPP
+   </button>
+  </form>
+ </div>
 </section>
 
-<section class="section container" id="paket">
-  <div class="section-title">
-    <h2>Paket Bundling</h2>
-    <p>Paket kreatif dengan harga lebih hemat.</p>
-  </div>
-  <div class="packages">
-    <article class="package">
-      <span class="tag">PAKET PEMULA</span>
-      <h3>Starter Package</h3>
-      <p>Untuk mulai membuat konten AI.</p>
-      <ul><li>1 AI Video 15 detik</li><li>2 Basic AI Photos</li></ul>
-      <div class="old">Normal Rp40.000</div>
-      <div class="promo">Rp35.000</div>
-      <button class="btn primary" onclick="choosePackage('Starter Package')">Pilih Paket</button>
-    </article>
-    <article class="package">
-      <span class="tag">PAKET KONTEN</span>
-      <h3>Reels Creator</h3>
-      <p>Untuk kebutuhan konten media sosial.</p>
-      <ul><li>1 AI Video 30 detik</li><li>1 Cinematic AI Photo</li></ul>
-      <div class="old">Normal Rp50.000</div>
-      <div class="promo">Rp45.000</div>
-      <button class="btn primary" onclick="choosePackage('Reels Creator')">Pilih Paket</button>
-    </article>
-    <article class="package">
-      <span class="tag">PAKET BISNIS</span>
-      <h3>Branding UMKM</h3>
-      <p>Untuk memperkenalkan produk dan bisnis.</p>
-      <ul><li>1 Video Promosi 30 detik</li><li>5 AI Photos</li></ul>
-      <div class="old">Normal Rp90.000</div>
-      <div class="promo">Rp80.000</div>
-      <button class="btn primary" onclick="choosePackage('Branding UMKM')">Pilih Paket</button>
-    </article>
-  </div>
+<section class="container">
+ <div class="heading">
+  <h2>CARA PEMESANAN</h2>
+  <p>Proses mudah, jelas, dan praktis.</p>
+  <div class="line"></div>
+ </div>
+ <div class="panel steps">
+  <div class="step"><span class="step-number">1</span><p><b>Pilih layanan</b><br>Tentukan layanan atau paket yang diinginkan.</p></div>
+  <div class="step"><span class="step-number">2</span><p><b>Kirim konsep</b><br>Isi ide, referensi, dan detail kebutuhan.</p></div>
+  <div class="step"><span class="step-number">3</span><p><b>Konfirmasi</b><br>Diskusikan detail serta harga melalui WhatsApp.</p></div>
+  <div class="step"><span class="step-number">4</span><p><b>Produksi karya</b><br>Pengerjaan dimulai setelah kesepakatan.</p></div>
+ </div>
 </section>
 
-<section class="section container" id="galeri">
-  <div class="section-title">
-    <h2>Contoh Karya AI</h2>
-    <p>Referensi konsep visual yang dapat dikembangkan.</p>
-  </div>
-  <div class="gallery">
-    <div class="work"><span>Cinematic AI Video<small>Visual film dan storytelling</small></span></div>
-    <div class="work"><span>Fantasy World<small>Dunia fantasi dan imajinasi</small></span></div>
-    <div class="work"><span>AI Portrait<small>Konsep foto kreatif</small></span></div>
-    <div class="work"><span>Business Promotion<small>Konten promosi produk</small></span></div>
-    <div class="work"><span>Action Scene<small>Adegan laga sinematik</small></span></div>
-    <div class="work"><span>AI Character<small>Desain karakter konsisten</small></span></div>
-  </div>
-  <p class="notice">Ilustrasi kategori dan konsep. Bukan klaim hasil pesanan pelanggan.</p>
+<section class="container">
+ <div class="heading">
+  <h2>FAQ</h2>
+  <p>Beberapa hal yang perlu diketahui.</p>
+  <div class="line"></div>
+ </div>
+ <div class="faq">
+  <details><summary>Apakah bisa request konsep sendiri?</summary><p>Bisa. Kirimkan ide, arahan visual, dan referensi melalui formulir pemesanan.</p></details>
+  <details><summary>Apakah bisa untuk TikTok dan YouTube?</summary><p>Bisa. Pilih rasio 9:16 untuk konten vertikal atau 16:9 untuk video landscape.</p></details>
+  <details><summary>Apakah harga bisa berubah?</summary><p>Harga yang ditampilkan merupakan harga dasar atau harga mulai. Harga akhir dikonfirmasi sebelum pengerjaan.</p></details>
+  <details><summary>Bagaimana cara membayar?</summary><p>Detail pembayaran dan proses pengerjaan dibicarakan melalui WhatsApp setelah pesanan dikonfirmasi.</p></details>
+ </div>
 </section>
 
-<section class="section container" id="pesan">
-  <div class="section-title">
-    <h2>Formulir Pemesanan</h2>
-    <p>Ceritakan ide yang ingin kamu wujudkan. Pesanan akan diteruskan melalui WhatsApp.</p>
+<section class="container">
+ <div class="contact">
+  <span class="hero-badge">LET'S CREATE</span>
+  <h2>WUJUDKAN IDEMU.</h2>
+  <p>Siap membuat sesuatu yang berbeda? Hubungi Meydiansyah Studio sekarang.</p>
+  <div class="socials">
+   <a class="btn primary" href="https://wa.me/6289654084629" target="_blank" rel="noopener">WhatsApp</a>
+   <a class="btn secondary" href="https://instagram.com/Bayumeydiansyahh" target="_blank" rel="noopener">Instagram</a>
   </div>
-  <div class="order-wrap">
-    <form class="panel" id="orderForm">
-      <div class="field"><label>Nama</label><input id="name" required placeholder="Nama kamu"></div>
-      <div class="field"><label>Nomor WhatsApp</label><input id="phone" required inputmode="tel" placeholder="08xxxxxxxxxx"></div>
-      <div class="field"><label>Pilih layanan atau paket</label>
-        <select id="service" required>
-          <option value="">Pilih layanan</option>
-        </select>
-      </div>
-      <div class="field"><label>Durasi video / jumlah foto</label>
-        <select id="quantity">
-          <option value="Sesuai diskusi">Sesuai diskusi</option>
-          <option value="Video 5-10 detik">Video 5-10 detik</option>
-          <option value="Video 15 detik">Video 15 detik</option>
-          <option value="Video 30 detik">Video 30 detik</option>
-          <option value="Video 60 detik">Video 60 detik</option>
-          <option value="1 foto">1 foto</option>
-          <option value="2 foto">2 foto</option>
-          <option value="5 foto">5 foto</option>
-        </select>
-      </div>
-      <div class="field"><label>Rasio video</label>
-        <select id="ratio">
-          <option>9:16 (TikTok / Reels / Shorts)</option>
-          <option>16:9 (YouTube / Landscape)</option>
-          <option>1:1 (Square)</option>
-          <option>Tidak berlaku</option>
-        </select>
-      </div>
-      <div class="field"><label>Konsep atau ide karya</label><textarea id="concept" required placeholder="Ceritakan ide, alur, suasana, atau kebutuhan karya..."></textarea></div>
-      <div class="field"><label>Link foto/video referensi (opsional)</label><input id="reference" placeholder="https://..."></div>
-      <div class="field"><label>Catatan tambahan</label><textarea id="notes" placeholder="Catatan lainnya..."></textarea></div>
-      <button class="btn primary" type="submit" style="width:100%">Kirim Pesanan via WhatsApp</button>
-    </form>
-    <aside class="panel">
-      <h3>Ringkasan Pemesanan</h3>
-      <div class="summary">
-        <p id="summaryText">Pilih layanan dan isi formulir untuk menyiapkan pesananmu.</p>
-      </div>
-      <h3>Alur Pemesanan</h3>
-      <p style="font-size:13px;color:#bdcfe2;line-height:1.8">
-        1. Pilih layanan atau paket.<br>
-        2. Jelaskan konsep dan kebutuhan.<br>
-        3. Kirim formulir melalui WhatsApp.<br>
-        4. Diskusikan detail dan konfirmasi harga.<br>
-        5. Proses pembuatan karya dimulai setelah kesepakatan.
-      </p>
-      <a class="btn secondary" style="width:100%" href="https://wa.me/6289654084629" target="_blank" rel="noopener">Chat WhatsApp Langsung</a>
-    </aside>
-  </div>
-</section>
-
-<section class="section container">
-  <div class="section-title"><h2>Pertanyaan Umum</h2><p>Informasi sebelum melakukan pemesanan.</p></div>
-  <div class="faq">
-    <details><summary>Apakah bisa request konsep sendiri?</summary><p>Bisa. Kamu dapat mengirimkan ide, referensi, dan arahan visual melalui formulir pemesanan.</p></details>
-    <details><summary>Apakah bisa membuat video untuk TikTok?</summary><p>Bisa. Pilih rasio 9:16 untuk TikTok, Instagram Reels, dan YouTube Shorts.</p></details>
-    <details><summary>Apakah harga sudah pasti?</summary><p>Harga yang ditampilkan merupakan harga dasar atau harga mulai. Konsep dan tingkat kesulitan dapat memengaruhi biaya akhir. Harga dikonfirmasi sebelum pengerjaan.</p></details>
-    <details><summary>Bagaimana cara memesan?</summary><p>Isi formulir di website, lalu tekan tombol kirim. WhatsApp akan terbuka dengan detail pesanan yang sudah disiapkan.</p></details>
-  </div>
-</section>
-
-<section class="section container">
-  <div class="contact">
-    <span class="eyebrow">LET'S CREATE SOMETHING</span>
-    <h2>Ide Besarmu Dimulai di Sini.</h2>
-    <p style="color:#c5d7e9;line-height:1.7">Punya konsep unik? Mari wujudkan menjadi karya visual AI.</p>
-    <div class="actions">
-      <a class="btn primary" href="https://wa.me/6289654084629" target="_blank" rel="noopener">WhatsApp</a>
-      <a class="btn secondary" href="https://instagram.com/Bayumeydiansyahh" target="_blank" rel="noopener">Instagram</a>
-    </div>
-  </div>
+ </div>
 </section>
 </main>
 
 <footer>
-  <strong>MEYDIANSYAH STUDIO</strong><br>
-  AI Creative House · © <span id="year"></span> All Rights Reserved
+ <b>MEYDIANSYAH STUDIO</b><br>
+ AI CREATIVE HOUSE<br>
+ © <span id="year"></span> All Rights Reserved.
 </footer>
 
-<div class="modal" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div class="modal-box">
-    <button class="close" onclick="closeDetail()" aria-label="Tutup">&times;</button>
-    <span class="tag">DETAIL LAYANAN</span>
-    <h2 id="modalTitle"></h2>
-    <p id="modalDescription"></p>
-    <p id="modalPrice"></p>
-    <button class="btn primary" id="modalOrder">Pesan Layanan Ini</button>
-  </div>
+<nav class="bottom-nav">
+ <a href="#home"><span class="symbol">⌂</span>Beranda</a>
+ <a href="#layanan"><span class="symbol">✦</span>Layanan</a>
+ <a href="#galeri"><span class="symbol">▧</span>Galeri</a>
+ <a href="#pesan"><span class="symbol">✉</span>Pesan</a>
+</nav>
+
+<div class="modal" id="detailModal">
+ <div class="modal-box">
+  <button class="close" onclick="closeDetail()">×</button>
+  <span class="tag">DETAIL LAYANAN</span>
+  <h2 id="modalTitle"></h2>
+  <p id="modalDescription"></p>
+  <p id="modalPrice" style="color:#53ddff;font-weight:bold"></p>
+  <button id="modalOrder" class="btn primary" style="width:100%">PESAN LAYANAN INI</button>
+ </div>
 </div>
 
 <script>
-const services = [
- {id:"v1",name:"AI Video 5-10 Detik",cat:"video",icon:"🎬",price:10000,desc:"Video AI pendek untuk visual singkat, bumper, teaser, dan konten kreatif."},
- {id:"v2",name:"AI Video 15 Detik",cat:"video",icon:"🎥",price:15000,desc:"Video AI berdurasi 15 detik untuk konten media sosial dan storytelling singkat."},
- {id:"v3",name:"AI Video 30 Detik",cat:"video",icon:"📽️",price:20000,desc:"Video AI 30 detik dengan alur visual untuk konten promosi atau hiburan."},
- {id:"v4",name:"AI Video 60 Detik",cat:"video",icon:"🎞️",price:40000,desc:"Video AI berdurasi satu menit untuk cerita dan konten yang lebih lengkap."},
- {id:"v5",name:"Cinematic AI Video",cat:"video",icon:"🎦",price:50000,desc:"Video bernuansa sinematik dengan komposisi gambar, atmosfer, dan alur visual yang dirancang sesuai konsep."},
- {id:"v6",name:"Fantasy Fight Video",cat:"video",icon:"⚔️",price:50000,desc:"Adegan pertarungan fantasi dengan efek visual, jurus, dan koreografi sesuai konsep."},
- {id:"v7",name:"Business Promotion Video",cat:"video",icon:"🚀",price:50000,desc:"Video promosi untuk memperkenalkan produk, usaha, atau layanan."},
- {id:"v8",name:"AI Storytelling",cat:"creative",icon:"📖",price:50000,desc:"Pembuatan cerita visual AI dengan karakter, alur, dan kesinambungan adegan."},
- {id:"p1",name:"Basic AI Photo",cat:"photo",icon:"📸",price:10000,desc:"Foto kreatif berbasis AI untuk kebutuhan konten dan visual personal."},
- {id:"p2",name:"Cinematic AI Photo",cat:"photo",icon:"🌆",price:15000,desc:"Foto AI dengan nuansa pencahayaan dan komposisi sinematik."},
- {id:"p3",name:"Fantasy AI Photo",cat:"photo",icon:"✨",price:20000,desc:"Foto bertema fantasi dengan dunia dan elemen visual imajinatif."},
- {id:"c1",name:"AI Character Sheet",cat:"creative",icon:"🧑‍🎨",price:15000,desc:"Lembar referensi karakter untuk membantu menjaga konsistensi karakter dalam proyek AI."}
+const services=[
+{id:"v1",name:"AI Video 5-10 Detik",cat:"video",icon:"🎬",price:10000,desc:"Video AI pendek untuk teaser, bumper, dan konten singkat."},
+{id:"v2",name:"AI Video 15 Detik",cat:"video",icon:"🎥",price:15000,desc:"Video kreatif untuk media sosial dan storytelling singkat."},
+{id:"v3",name:"AI Video 30 Detik",cat:"video",icon:"📽️",price:20000,desc:"Video AI dengan alur visual untuk konten kreatif."},
+{id:"v4",name:"AI Video 60 Detik",cat:"video",icon:"🎞️",price:40000,desc:"Video satu menit untuk cerita dan konten lebih lengkap."},
+{id:"v5",name:"Cinematic AI Video",cat:"video",icon:"🎦",price:50000,desc:"Visual sinematik dengan atmosfer dan komposisi film."},
+{id:"v6",name:"Fantasy Fight Video",cat:"video",icon:"⚔️",price:50000,desc:"Pertarungan fantasi dengan jurus dan efek visual."},
+{id:"v7",name:"Business Promotion",cat:"video",icon:"🚀",price:50000,desc:"Video promosi produk, usaha, atau layanan."},
+{id:"v8",name:"AI Storytelling",cat:"creative",icon:"📖",price:50000,desc:"Cerita visual AI dengan karakter dan kesinambungan adegan."},
+{id:"p1",name:"Basic AI Photo",cat:"photo",icon:"📸",price:10000,desc:"Foto kreatif AI untuk kebutuhan konten personal."},
+{id:"p2",name:"Cinematic AI Photo",cat:"photo",icon:"🌆",price:15000,desc:"Foto dengan komposisi dan pencahayaan sinematik."},
+{id:"p3",name:"Fantasy AI Photo",cat:"photo",icon:"✨",price:20000,desc:"Foto bertema fantasi dengan visual imajinatif."},
+{id:"c1",name:"AI Character Sheet",cat:"creative",icon:"🧑‍🎨",price:15000,desc:"Lembar referensi untuk menjaga konsistensi karakter AI."}
 ];
 
-const rupiah = n => "Rp" + n.toLocaleString("id-ID");
-const catalog = document.getElementById("catalog");
-const serviceSelect = document.getElementById("service");
-const search = document.getElementById("search");
-const category = document.getElementById("category");
-const sort = document.getElementById("sort");
+const packages={
+"Starter Package":35000,
+"Reels Creator":45000,
+"Branding UMKM":80000
+};
+const rupiah=n=>"Rp"+n.toLocaleString("id-ID");
+const catalog=document.getElementById("catalog");
+const service=document.getElementById("service");
+const search=document.getElementById("search");
+const category=document.getElementById("category");
 
-function renderCatalog(){
- let list = services.filter(s =>
-   (category.value==="all" || s.cat===category.value) &&
-   (s.name+" "+s.desc).toLowerCase().includes(search.value.toLowerCase())
+services.forEach(s=>{
+ const o=document.createElement("option");
+ o.value=s.name;
+ o.textContent=s.name+" - "+rupiah(s.price);
+ service.appendChild(o);
+});
+Object.keys(packages).forEach(n=>{
+ const o=document.createElement("option");
+ o.value=n;o.textContent=n+" - "+rupiah(packages[n]);
+ service.appendChild(o);
+});
+
+function render(){
+ let list=services.filter(s=>
+ (category.value==="all"||s.cat===category.value)&&
+ (s.name+" "+s.desc).toLowerCase().includes(search.value.toLowerCase())
  );
- if(sort.value==="low") list.sort((a,b)=>a.price-b.price);
- if(sort.value==="high") list.sort((a,b)=>b.price-a.price);
- catalog.innerHTML = "";
+ catalog.innerHTML="";
  if(!list.length){
-   catalog.innerHTML='<p style="color:#b9cce0">Layanan tidak ditemukan. Coba kata pencarian lain.</p>';
-   return;
+ catalog.innerHTML="<p style='color:#a9bdd3'>Tidak ada layanan ditemukan.</p>";
+ return;
  }
  list.forEach(s=>{
-   const card=document.createElement("article");
-   card.className="service";
-   card.innerHTML=`
-    <div class="thumb">${s.icon}</div>
-    <div class="service-content">
-      <span class="tag">${s.cat==="video"?"AI VIDEO":s.cat==="photo"?"AI PHOTO":"CREATIVE"}</span>
-      <h3>${s.name}</h3>
-      <p>${s.desc}</p>
-      <div class="price">${rupiah(s.price)}${["v5","v6","v7","v8"].includes(s.id)?" <small style='font-size:10px;color:#9db2cb'>mulai</small>":""}</div>
-      <div class="service-actions">
-        <button class="btn secondary" data-detail="${s.id}">Lihat Detail</button>
-        <button class="btn primary" data-order="${s.id}">Pesan</button>
-      </div>
-    </div>`;
-   catalog.appendChild(card);
+ const el=document.createElement("article");
+ el.className="service";
+ el.innerHTML=`
+ <div class="thumb">${s.icon}</div>
+ <div class="service-body">
+ <span class="tag">${s.cat==="video"?"AI VIDEO":s.cat==="photo"?"AI PHOTO":"CREATIVE"}</span>
+ <h3>${s.name}</h3>
+ <p>${s.desc}</p>
+ <div class="price">${rupiah(s.price)} ${s.price>=50000?"<small>mulai</small>":""}</div>
+ <div class="service-buttons">
+ <button class="btn secondary" data-detail="${s.id}">Detail</button>
+ <button class="btn primary" data-order="${s.id}">Pesan</button>
+ </div>
+ </div>`;
+ catalog.appendChild(el);
  });
 }
-services.forEach(s=>{
- const option=document.createElement("option");
- option.value=s.name;option.textContent=s.name+" · "+rupiah(s.price);
- serviceSelect.appendChild(option);
-});
-["Starter Package","Reels Creator","Branding UMKM"].forEach(n=>{
- const o=document.createElement("option");o.value=n;o.textContent=n;serviceSelect.appendChild(o);
-});
 catalog.addEventListener("click",e=>{
  const d=e.target.closest("[data-detail]");
  const o=e.target.closest("[data-order]");
- if(d) showDetail(d.dataset.detail);
- if(o) chooseService(o.dataset.order);
+ if(d)showDetail(d.dataset.detail);
+ if(o)chooseService(o.dataset.order);
 });
 function showDetail(id){
- const s=services.find(x=>x.id===id);if(!s)return;
+ const s=services.find(x=>x.id===id);
+ if(!s)return;
  document.getElementById("modalTitle").textContent=s.name;
- document.getElementById("modalDescription").textContent=s.desc+" Cocok untuk kebutuhan konten media sosial, personal branding, maupun proyek kreatif. Proses dimulai dari diskusi konsep, penentuan referensi, produksi, dan penyerahan hasil.";
+ document.getElementById("modalDescription").textContent=
+ s.desc+" Cocok untuk konten media sosial, personal branding, bisnis, dan proyek kreatif. Proses dimulai dari diskusi konsep, referensi, produksi, hingga penyerahan hasil.";
  document.getElementById("modalPrice").textContent="Harga: "+rupiah(s.price)+(s.price>=50000?" (mulai)":"");
- document.getElementById("modalOrder").onclick=()=>{closeDetail();chooseService(id)};
+ document.getElementById("modalOrder").onclick=()=>{
+ closeDetail();chooseService(id);
+ };
  document.getElementById("detailModal").classList.add("show");
 }
-function closeDetail(){document.getElementById("detailModal").classList.remove("show")}
+function closeDetail(){
+ document.getElementById("detailModal").classList.remove("show");
+}
 function chooseService(id){
- const s=services.find(x=>x.id===id);if(!s)return;
- serviceSelect.value=s.name;updateSummary();
+ const s=services.find(x=>x.id===id);
+ if(!s)return;
+ service.value=s.name;
+ updateSummary();
  document.getElementById("pesan").scrollIntoView({behavior:"smooth"});
 }
 function choosePackage(name){
- serviceSelect.value=name;updateSummary();
+ service.value=name;
+ updateSummary();
  document.getElementById("pesan").scrollIntoView({behavior:"smooth"});
 }
 function updateSummary(){
- const selected=serviceSelect.value||"Belum dipilih";
- document.getElementById("summaryText").textContent=
- "Layanan: "+selected+". Durasi/jumlah: "+document.getElementById("quantity").value+
- ". Rasio: "+document.getElementById("ratio").value+
- ". Lengkapi konsep dan data kontak, lalu kirim pesanan melalui WhatsApp.";
+ const s=service.value||"Belum dipilih";
+ const q=document.getElementById("quantity").value;
+ const r=document.getElementById("ratio").value;
+ document.getElementById("summary").textContent=
+ "Layanan: "+s+" | Durasi/jumlah: "+q+" | Format: "+r+". Harga akhir dikonfirmasi melalui WhatsApp.";
 }
-[search,category,sort].forEach(el=>el.addEventListener("input",renderCatalog));
-[serviceSelect,document.getElementById("quantity"),document.getElementById("ratio")].forEach(el=>el.addEventListener("change",updateSummary));
+[search,category].forEach(x=>x.addEventListener("input",render));
+[service,document.getElementById("quantity"),document.getElementById("ratio")].forEach(x=>x.addEventListener("change",updateSummary));
+
 document.getElementById("orderForm").addEventListener("submit",e=>{
  e.preventDefault();
  const name=document.getElementById("name").value.trim();
  const phone=document.getElementById("phone").value.trim();
- const service=serviceSelect.value;
+ const selected=service.value;
  const concept=document.getElementById("concept").value.trim();
- if(!name||!phone||!service||!concept){alert("Mohon lengkapi nama, WhatsApp, layanan, dan konsep.");return}
+ if(!name||!phone||!selected||!concept){
+ alert("Lengkapi nama, nomor WhatsApp, layanan, dan konsep terlebih dahulu.");
+ return;
+ }
  const reference=document.getElementById("reference").value.trim();
  const notes=document.getElementById("notes").value.trim();
- const orderId="MS"+Date.now().toString().slice(-8);
- const message=
-`Halo Meydiansyah Studio, saya ingin memesan layanan.
+ const id="MS"+Date.now().toString().slice(-8);
+ const message=`HALO MEYDIANSYAH STUDIO!
 
-ID Pesanan: ${orderId}
+Saya ingin melakukan pemesanan.
+
+ID Pesanan: ${id}
 Nama: ${name}
-WhatsApp: ${phone}
-Layanan/Paket: ${service}
+Nomor WhatsApp: ${phone}
+Layanan: ${selected}
 Durasi/Jumlah: ${document.getElementById("quantity").value}
-Rasio: ${document.getElementById("ratio").value}
+Format: ${document.getElementById("ratio").value}
 
-Konsep:
+KONSEP:
 ${concept}
 
 Referensi: ${reference||"-"}
 Catatan: ${notes||"-"}
 
 Mohon informasi proses dan konfirmasi harga. Terima kasih.`;
- window.open("https://wa.me/6289654084629?text="+encodeURIComponent(message),"_blank");
+ window.location.href="https://wa.me/6289654084629?text="+encodeURIComponent(message);
+});
+
+document.getElementById("detailModal").addEventListener("click",e=>{
+ if(e.target.id==="detailModal")closeDetail();
 });
 document.getElementById("year").textContent=new Date().getFullYear();
-document.getElementById("detailModal").addEventListener("click",e=>{if(e.target.id==="detailModal")closeDetail()});
-renderCatalog();updateSummary();
+render();
+updateSummary();
 </script>
 </body>
 </html>
