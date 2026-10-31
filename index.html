@@ -283,6 +283,86 @@ background:none;border:0;color:white;font-size:25px;
 .catalog{grid-template-columns:repeat(3,1fr)}
 .package-list{grid-template-columns:repeat(3,1fr)}
 }
+ 
+.gallery-tabs{
+ display:flex;
+ justify-content:center;
+ gap:8px;
+ margin-bottom:18px;
+}
+.gallery-tabs button{
+ background:#10233e;
+ color:#b9cde2;
+ border:1px solid #ffffff25;
+ padding:10px 19px;
+ border-radius:30px;
+ font-size:11px;
+}
+.gallery-tabs button.active{
+ background:linear-gradient(100deg,#087cff,#25c8f5);
+ color:white;
+ border-color:transparent;
+}
+.gallery{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:11px;
+}
+.portfolio-item{
+ overflow:hidden;
+ background:#10213c;
+ border:1px solid #42dcff35;
+ border-radius:13px;
+}
+.portfolio-item img,
+.portfolio-item video{
+ display:block;
+ width:100%;
+ height:145px;
+ object-fit:cover;
+ background:#071326;
+}
+.portfolio-info{
+ padding:11px;
+ display:flex;
+ flex-direction:column;
+ gap:5px;
+}
+.portfolio-info strong{font-size:12px}
+.portfolio-info small{
+ color:#48dfff;
+ font-size:9px;
+}
+.photo-viewer{
+ display:none;
+ position:fixed;
+ inset:0;
+ z-index:200;
+ background:#000e;
+ align-items:center;
+ justify-content:center;
+ padding:15px;
+}
+.photo-viewer.show{display:flex}
+.photo-viewer img{
+ max-width:100%;
+ max-height:85vh;
+ object-fit:contain;
+ border-radius:10px;
+}
+.photo-close{
+ position:absolute;
+ top:20px;
+ right:20px;
+ background:#ffffff22;
+ color:white;
+ border:0;
+ border-radius:50%;
+ width:40px;
+ height:40px;
+ font-size:25px;
+}
+ 
 </style>
 </head>
 
@@ -331,41 +411,97 @@ background:none;border:0;color:white;font-size:25px;
  <div class="catalog" id="catalog"></div>
 </section>
 
-<section class="container" id="paket">
+
+<section class="container" id="galeri">
  <div class="heading">
-  <h2>PAKET HEMAT</h2>
-  <p>Pilihan paket untuk kebutuhan kontenmu.</p>
+  <h2>PORTFOLIO KARYA AI</h2>
+  <p>Kumpulan contoh karya Meydiansyah Studio.</p>
   <div class="line"></div>
  </div>
- <div class="package-list">
-  <article class="package">
-   <span class="tag">STARTER</span>
-   <h3>Starter Package</h3>
-   <p>Awali kreativitasmu dengan paket sederhana.</p>
-   <ul><li>1 AI Video 15 detik</li><li>2 Basic AI Photos</li></ul>
-   <div class="old">Normal Rp40.000</div>
-   <div class="promo">Rp35.000</div>
-   <button class="btn primary" onclick="choosePackage('Starter Package')">Pilih Paket</button>
-  </article>
-  <article class="package">
-   <span class="tag">CONTENT CREATOR</span>
-   <h3>Reels Creator</h3>
-   <p>Untuk konten media sosial yang menarik.</p>
-   <ul><li>1 AI Video 30 detik</li><li>1 Cinematic Photo</li></ul>
-   <div class="old">Normal Rp50.000</div>
-   <div class="promo">Rp45.000</div>
-   <button class="btn primary" onclick="choosePackage('Reels Creator')">Pilih Paket</button>
-  </article>
-  <article class="package">
-   <span class="tag">BUSINESS</span>
-   <h3>Branding UMKM</h3>
-   <p>Perkenalkan bisnis melalui konten visual.</p>
-   <ul><li>1 Video Promosi 30 detik</li><li>5 AI Photos</li></ul>
-   <div class="old">Normal Rp90.000</div>
-   <div class="promo">Rp80.000</div>
-   <button class="btn primary" onclick="choosePackage('Branding UMKM')">Pilih Paket</button>
-  </article>
+
+ <div class="gallery-tabs">
+  <button class="active" onclick="filterGallery('all',this)">Semua</button>
+  <button onclick="filterGallery('foto',this)">Foto</button>
+  <button onclick="filterGallery('video',this)">Video</button>
  </div>
+
+ <div class="gallery" id="portfolioGallery">
+
+  <!-- SAMPLE FOTO 1 -->
+  <div class="portfolio-item" data-type="foto">
+   <img src="assets/foto/cinematic.jpg"
+        alt="Contoh karya cinematic AI"
+        onclick="openPhoto(this.src)">
+   <div class="portfolio-info">
+    <strong>Cinematic AI</strong>
+    <small>Contoh Karya AI · Foto</small>
+   </div>
+  </div>
+
+  <!-- SAMPLE FOTO 2 -->
+  <div class="portfolio-item" data-type="foto">
+   <img src="assets/foto/fantasy.jpg"
+        alt="Contoh karya fantasy AI"
+        onclick="openPhoto(this.src)">
+   <div class="portfolio-info">
+    <strong>Fantasy AI</strong>
+    <small>Contoh Karya AI · Foto</small>
+   </div>
+  </div>
+
+  <!-- SAMPLE FOTO 3 -->
+  <div class="portfolio-item" data-type="foto">
+   <img src="assets/foto/portrait.jpg"
+        alt="Contoh portrait AI"
+        onclick="openPhoto(this.src)">
+   <div class="portfolio-info">
+    <strong>AI Portrait</strong>
+    <small>Contoh Karya AI · Foto</small>
+   </div>
+  </div>
+
+  <!-- SAMPLE VIDEO 1 -->
+  <div class="portfolio-item" data-type="video">
+   <video controls playsinline preload="metadata">
+    <source src="assets/video/cinematic.mp4" type="video/mp4">
+   </video>
+   <div class="portfolio-info">
+    <strong>Cinematic Video</strong>
+    <small>Contoh Karya AI · Video</small>
+   </div>
+  </div>
+
+  <!-- SAMPLE VIDEO 2 -->
+  <div class="portfolio-item" data-type="video">
+   <video controls playsinline preload="metadata">
+    <source src="assets/video/fantasy.mp4" type="video/mp4">
+   </video>
+   <div class="portfolio-info">
+    <strong>Fantasy Action</strong>
+    <small>Contoh Karya AI · Video</small>
+   </div>
+  </div>
+
+  <!-- SAMPLE VIDEO 3 -->
+  <div class="portfolio-item" data-type="video">
+   <video controls playsinline preload="metadata">
+    <source src="assets/video/promosi.mp4" type="video/mp4">
+   </video>
+   <div class="portfolio-info">
+    <strong>Business Promotion</strong>
+    <small>Contoh Karya AI · Video</small>
+   </div>
+  </div>
+
+ </div>
+ <p class="notice">Semua media merupakan contoh karya AI.</p>
+</section>
+
+<div class="photo-viewer" id="photoViewer" onclick="closePhoto()">
+ <button class="photo-close">×</button>
+ <img id="largePhoto" alt="Preview karya AI">
+</div>
+
 </section>
 
 <section class="container" id="galeri">
@@ -666,6 +802,31 @@ document.getElementById("detailModal").addEventListener("click",e=>{
 document.getElementById("year").textContent=new Date().getFullYear();
 render();
 updateSummary();
+ 
+function filterGallery(type,button){
+ document.querySelectorAll(".gallery-tabs button")
+ .forEach(b=>b.classList.remove("active"));
+
+ button.classList.add("active");
+
+ document.querySelectorAll(".portfolio-item")
+ .forEach(item=>{
+  item.style.display=
+   type==="all"||item.dataset.type===type
+   ?"block":"none";
+ });
+}
+
+function openPhoto(src){
+ document.getElementById("largePhoto").src=src;
+ document.getElementById("photoViewer").classList.add("show");
+}
+
+function closePhoto(){
+ document.getElementById("photoViewer").classList.remove("show");
+ document.getElementById("largePhoto").src="";
+}
+ 
 </script>
 </body>
 </html>
